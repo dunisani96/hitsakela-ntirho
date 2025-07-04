@@ -5,11 +5,11 @@ import { motion, AnimatePresence } from "framer-motion";
 // Slides data: title and corresponding background image
 const slides = [
   {
-    title: "Empowering Industries",
+    title: "Electrification",
     image: "electrification.jpg",
   },
   {
-    title: "Driving Innovation",
+    title: "Civil and Construction",
     image: "civil-and-construction.jpg",
   },
   {
@@ -22,7 +22,11 @@ const slides = [
   },
     {
     title: "Pest Control",
-    image: "pest-control.jpg",
+    image: "pest-control.jpeg",
+  },
+    {
+    title: "Reforestation",
+    image: "reforest.jpg",
   },
   
 ];
@@ -66,19 +70,7 @@ export default function HeroSection() {
             Explore Our Services
           </motion.button>
 
-          <AnimatePresence mode="wait">
-            <motion.h1
-              key={currentSlide.title}
-              className="text-4xl md:text-6xl font-bold text-white mb-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.8 }}
-            >
-              {currentSlide.title}{" "}
-              <span className="text-blue-400">Our Group</span>
-            </motion.h1>
-          </AnimatePresence>
+       
 
           <motion.p
             className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-6"
@@ -89,6 +81,20 @@ export default function HeroSection() {
             Discover how we’re transforming civil works, electrification,
             medical supply, and more with innovation and integrity.
           </motion.p>
+
+             <AnimatePresence mode="wait">
+            <motion.h1
+              key={currentSlide.title}
+              className="text-4xl md:text-6xl font-bold text-white mb-4"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.8 }}
+            >
+              {currentSlide.title}{" "}
+              
+            </motion.h1>
+          </AnimatePresence>
         </div>
       </div>
     </section>
