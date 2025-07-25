@@ -5,72 +5,72 @@ import { ArrowRight, Star } from "lucide-react";
 
 const services = [
   {
-    image: "civil-and-construction.jpg",
-    title: "Commercial Construction",
+    image: "civil-construc.jpg",
+    title: "Civil and. Construction / Mining",
     description:
       "Full-scale commercial building projects from design to completion, including offices, retail spaces, and industrial facilities.",
     category: "Construction",
   },
   {
-    image: "electrification.jpg",
-    title: "Electrical Installation",
+    image: "electrif.jpg",
+    title: "Electronification",
     description:
       "Professional electrical systems installation for residential and commercial properties with certified technicians.",
-    category: "Electrification",
+    category: "Electronification",
   },
   {
-    image: "pest-control.jpeg",
-    title: "Integrated Pest Management",
+    image: "mechanical-works.jpg",
+    title: "Mechanical works",
     description:
       "Comprehensive pest control solutions using eco-friendly methods to protect your property year-round.",
-    category: "Pest Control",
-  },
-  {
-    image: "vegetation-2.jpg",
-    title: "Landscape Design & Maintenance",
-    description:
-      "Professional landscaping services including design, installation, and ongoing maintenance for beautiful outdoor spaces.",
-    category: "Vegetation",
-  },
-  {
-    image: "plant-hire-hero.jpg",
-    title: "Heavy Equipment Rental",
-    description:
-      "Wide range of construction and industrial equipment available for short-term and long-term rental projects.",
-    category: "Plant Hire",
-  },
-  {
-    image: "/medical.jpg",
-    title: "Medical Equipment Supply",
-    description:
-      "Quality medical supplies and equipment for healthcare facilities, clinics, and medical professionals.",
-    category: "Medical",
-  },
-  {
-    image: "/mechanical.jpg",
-    title: "Mechanical Services",
-    description:
-      "Comprehensive mechanical solutions including repairs and custom-built systems.",
     category: "Mechanical",
   },
   {
-    image: "/logistics.jpg",
-    title: "Logistics & Transportation",
+    image: "plant-hire-hero.jpg",
+    title: "Plant Hire",
+    description:
+      "Professional landscaping services including design, installation, and ongoing maintenance for beautiful outdoor spaces.",
+    category: "Plant Hire",
+  },
+  {
+    image: "/cold-mix-asphalt.jpg",
+    title: "Asphalt Cold mix manufacturing",
+    description:
+      "Wide range of construction and industrial equipment available for short-term and long-term rental projects.",
+    category: "Asphalt",
+  },
+  {
+    image: "/vegetation.jpg",
+    title: "Vegitation Management",
+    description:
+      "Quality medical supplies and equipment for healthcare facilities, clinics, and medical professionals.",
+    category: "Vegitation",
+  },
+  {
+    image: "/pest-control.jpeg",
+    title: "Pest Control",
+    description:
+      "Comprehensive mechanical solutions including repairs and custom-built systems.",
+    category: "Pest Control",
+  },
+  {
+    image: "/general-med.jpg",
+    title: "General Medical Supplies",
     description:
       "Efficient logistics services to manage supply chains and deliver goods safely.",
-    category: "Logistics",
+    category: "Medical",
   },
 ];
 
 const cardColors: Record<string, string> = {
   Construction: "bg-orange-400",
-  Electrification: "bg-blue-400",
-  "Pest Control": "bg-red-400",
-  Vegetation: "bg-yellow-400",
-  "Plant Hire": "bg-gray-400",
-  Medical: "bg-green-400",
-  Mechanical: "bg-purple-400",
-  Logistics: "bg-pink-400",
+  Electronification: "bg-blue-400",
+  "Pest Control": "bg-lime-600",
+  Vegitation: "bg-green-400",
+  "Plant Hire": "bg-yellow-400",
+  Medical: "bg-purple-400",
+  Mechanical: "bg-red-400",
+  Asphalt: "bg-gray-400",
 };
 
 const containerVariants = {
@@ -103,7 +103,7 @@ const imageVariants = {
 
 export default function ServicesSection() {
   return (
-    <section className="py-20 px-4 relative overflow-hidden bg-white">
+    <section id="service" className="py-20 px-4 relative overflow-hidden bg-white">
       {/* Decorative Background Circles */}
       <div className="absolute top-0 left-1/4 w-96 h-96  rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-1/4 w-80 h-80  rounded-full blur-3xl" />
@@ -122,15 +122,20 @@ export default function ServicesSection() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Our Services
+            Services we provide
           </motion.h2>
+          <div className=" flex justify-center">
+            <div className="w-30 h-1 bg-blue-400 rounded-full mb-4" />
+          </div>
+
           <motion.p
             className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            Comprehensive solutions tailored to meet your specific needs across all our specialized sectors.
+            Comprehensive solutions tailored to meet your specific needs across
+            all our specialized sectors.
           </motion.p>
         </motion.div>
 
@@ -148,7 +153,7 @@ export default function ServicesSection() {
               whileHover={{ y: -12, transition: { duration: 0.3 } }}
               className="group relative flex flex-col h-full"
             >
-              <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col h-full">
+              <div className="bg-white overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col h-full">
                 {/* Badge */}
                 {service.featured && (
                   <motion.div
@@ -201,12 +206,12 @@ export default function ServicesSection() {
                   </motion.p>
 
                   <motion.button
-                    className="inline-flex items-center text-white font-semibold hover:underline group/btn"
-                    whileHover={{ x: 5 }}
+                    className="m-2 inline-flex items-center px-6 py-3 text-sm font-semibold text-white border-2 border-white bg-transparent rounded-lg hover:bg-white hover:text-gray-900 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 group/btn transition-all duration-300"
+                    whileHover={{ x: 5, scale: 1.05 }}
                     transition={{ duration: 0.2 }}
                   >
-                    Learn More
-                    <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-200" />
+                    View Projects
+                    <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-200 group-hover/btn:translate-x-1" />
                   </motion.button>
                 </div>
               </div>

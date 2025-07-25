@@ -91,9 +91,50 @@ const statsVariants = {
 
 export default function AboutSection() {
   return (
-    <>
+    <section id="about">
       {/* Hero Section */}
-     
+
+
+      <section className="bg-white ">
+        <motion.div
+          className="text-center mb-16 pt-16 "
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <motion.h2
+            className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            About Our Group
+          </motion.h2>
+          <div className="flex justify-center">
+            <div className="w-24 h-1 bg-blue-400 rounded-full mb-4" />
+          </div>
+          {/* <motion.p
+              className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
+              We are a dynamic group of companies united by a shared commitment
+              to excellence, innovation, and sustainable growth. With decades of
+              combined experience across multiple sectors, we deliver
+              comprehensive solutions that drive success for our clients and
+              communities.
+            </motion.p> */}
+        </motion.div>
+
+        <motion.div>
+          <img
+            src="riverside-office-park.jpg"
+            alt="Our team and facilities"
+            className="w-full h-full object-cover"
+          />
+        </motion.div>
+      </section>
 
       <section className="py-20 px-4 bg-white relative overflow-hidden">
         {/* Background decorative elements */}
@@ -103,13 +144,13 @@ export default function AboutSection() {
 
         <div className="max-w-7xl mx-auto relative z-10">
           {/* Header */}
-          <motion.div
+          {/* <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            {/* <motion.h2
+            <motion.h2
               className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -128,102 +169,80 @@ export default function AboutSection() {
               combined experience across multiple sectors, we deliver
               comprehensive solutions that drive success for our clients and
               communities.
-            </motion.p> */}
-          </motion.div>
+            </motion.p>
+          </motion.div> */}
 
           {/* Main Content Grid */}
-          <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+          <div className="">
             {/* Left Content */}
             <motion.div
               variants={containerVariants}
               initial="hidden"
               animate="visible"
-              className="space-y-8"
+              className="space-y-8 w-full"
             >
-              <motion.div variants={itemVariants}>
-                <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                 About our group
-                </h3>
-                <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                  Our journey began with a simple vision: to create a group of
-                  companies that could provide end-to-end solutions across
-                  essential industries. From civil construction to medical
-                  supplies, we've grown into a trusted partner for businesses
-                  and communities alike.
-                </p>
-                <p className="text-gray-600 text-lg leading-relaxed">
-                  What sets us apart is our integrated approach. By operating
-                  across multiple sectors, we bring unique insights and
-                  cross-industry expertise to every project, ensuring innovative
-                  solutions that stand the test of time.
-                </p>
-              </motion.div>
+              <motion.div variants={itemVariants} className="text-center">
+                {/* <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                  About our group
+                </h3> */}
 
-              <motion.div variants={itemVariants} className="pt-4">
-                <h4 className="text-xl font-semibold text-gray-900 mb-4">
-                  Our Core Values
-                </h4>
-                <div className="space-y-4">
-                  {values.map((value, index) => (
-                    <motion.div
-                      key={value.title}
-                      className="flex items-start space-x-3"
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.6 + index * 0.1 }}
-                    >
-                      <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mt-3 flex-shrink-0" />
-                      <div>
-                        <h5 className="font-semibold text-gray-900 mb-1">
-                          {value.title}
-                        </h5>
-                        <p className="text-gray-600">{value.description}</p>
-                      </div>
-                    </motion.div>
-                  ))}
-                </div>
+              
+
+              
+
+                <div className="mt-20 text-left grid grid-cols-2 gap-6">
+                  <div>
+                    <p className="text-gray-900 mb-6 text-2lg tracking-normal text-lg/8 font-normal">
+                      Hitsakela Ntiro Projects, trading as Ntiro Projects –
+                      Group of Companies, is a dynamic and 100% black-owned
+                      South African enterprise founded in 2003. We operate
+                      across multiple sectors, delivering integrated solutions
+                      in construction, electrification, mechanical engineering,
+                      environmental services, logistics, and health technology
+                      supply. With a strong footprint in both the public and
+                      private sectors, we pride ourselves on sustainable service
+                      delivery, local empowerment, and innovation. We are driven
+                      by a mission to develop infrastructure, uplift
+                      communities, and meet the evolving needs of our continent
+                      with professionalism and excellence.
+                    </p>
+                  </div>
+
+                  <div>
+                    
+                      <motion.div variants={itemVariants} className="pt-4">
+                        <h4 className="text-xl font-semibold text-gray-900 mb-4">
+                          Our Core Values
+                        </h4>
+                        <div className="space-y-4">
+                          {values.map((value, index) => (
+                            <motion.div
+                              key={value.title}
+                              className="flex items-start space-x-3"
+                              initial={{ opacity: 0, x: -20 }}
+                              animate={{ opacity: 1, x: 0 }}
+                              transition={{ delay: 0.6 + index * 0.1 }}
+                            >
+                              <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mt-3 flex-shrink-0" />
+                              <div>
+                                <h5 className="font-semibold text-gray-900 mb-1">
+                                  {value.title}
+                                </h5>
+                                <p className="text-gray-600">
+                                  {value.description}
+                                </p>
+                              </div>
+                            </motion.div>
+                          ))}
+                        </div>
+                      </motion.div>
+                    </div>
+                  </div>
+                
               </motion.div>
             </motion.div>
 
             {/* Right Content - Image Placeholder */}
-            <motion.div
-              className="relative"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-            >
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img
-                  src="construction-about.jpg"
-                  alt="Our team and facilities"
-                  className="w-full h-[500px] object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-              </div>
-
-              {/* Floating card */}
-              {/* <motion.div
-                className="absolute -bottom-6 -left-6 bg-white rounded-xl p-6 shadow-xl border border-gray-100"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1, duration: 0.6 }}
-                whileHover={{ scale: 1.05 }}
-              >
-                <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">
-                    <Award className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-gray-900">
-                      Certified Excellence
-                    </p>
-                    <p className="text-sm text-gray-600">
-                      ISO Certified Operations
-                    </p>
-                  </div>
-                </div>
-              </motion.div> */}
-            </motion.div>
           </div>
 
           {/* Stats Section */}
@@ -268,7 +287,7 @@ export default function AboutSection() {
           </motion.div> */}
 
           {/* Call to Action */}
-          <motion.div
+          {/* <motion.div
             className="text-center mt-16"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -291,9 +310,9 @@ export default function AboutSection() {
             >
               View Our Projects
             </motion.button>
-          </motion.div>
+          </motion.div> */}
         </div>
       </section>
-    </>
+    </section>
   );
 }

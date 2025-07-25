@@ -9,19 +9,26 @@ import Footer from "./components/footer";
 import OutlineButton from "./components/outline-button";
 import Carousel from "./components/carousel";
 import Offices from "./components/offices";
+import Projects from "./components/projects";
+import Testimonials from "./components/testimonials";
+import Team from "./components/team";
+import HeroBanner from "./components/hero-banner";
 
 const Home = () => {
   return (
     <div>
       <Navbar />
       <div className="mt-12"></div>
+      {/* <HeroBanner/> */}
       <HeroSection />
-      <OutlineButton name={"View Groups"} color="blue" url={""}/>
+      <OutlineButton name={"Contact Us"} color="blue" url={"/contact"}/>
       <Carousel/>
       <AboutSection />
-      {/* <CompanySectors /> */}
+      <Team/>
       <ServicesSection />
-      {/* <ContactSection /> */}
+      <Projects/>
+      <Testimonials/>
+      <ContactSection />
       <Offices/>
       <Footer />
     </div>

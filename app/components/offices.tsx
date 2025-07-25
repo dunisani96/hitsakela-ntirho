@@ -5,43 +5,58 @@ import { MapPin, Phone, Mail } from "lucide-react";
 
 const offices = [
   {
-    city: "Johannesburg",
-    address: "123 Main Street, Sandton, 2196",
-    phone: "+27 11 123 4567",
-    email: "jhb@ntirogroup.co.za",
-    mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.075961825475!2d28.0588!3d-26.1076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9509e622cf9f47%3A0x429d4739ec5df50a!2sSandton!5e0!3m2!1sen!2sza!4v1687955998505",
+    city: "Head Office",
+    address: "Suite 4,, The Chambers, 37a Grobler Street, Polokwane, 0700",
+    phone: "+27 15 291 1619",
+    email: "info@ntiroprojects.co.za",
+
+    mapSrc:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.075961825475!2d28.0588!3d-26.1076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9509e622cf9f47%3A0x429d4739ec5df50a!2sSandton!5e0!3m2!1sen!2sza!4v1687955998505",
   },
   {
-    city: "Cape Town",
+    city: "Western Cape",
     address: "456 Long Street, CBD, 8000",
     phone: "+27 21 765 4321",
-    email: "cpt@ntirogroup.co.za",
-    mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.498998227901!2d18.4196!3d-33.9258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc6763f8d8f49f%3A0x6cf10c5eaefc8b52!2sCape%20Town!5e0!3m2!1sen!2sza!4v1687956050622",
+    email: "info@ntiroprojects.co.za",
+    mapSrc:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.498998227901!2d18.4196!3d-33.9258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc6763f8d8f49f%3A0x6cf10c5eaefc8b52!2sCape%20Town!5e0!3m2!1sen!2sza!4v1687956050622",
   },
   {
-    city: "Durban",
+    city: "Gauteng",
     address: "789 Beach Road, Umhlanga, 4319",
     phone: "+27 31 555 7890",
-    email: "dbn@ntirogroup.co.za",
-    mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3444.329181542643!2d31.0836!3d-29.7283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef7058caaae0b5f%3A0x11211239dfeb16b6!2sUmhlanga!5e0!3m2!1sen!2sza!4v1687956107512",
+    email: "info@ntiroprojects.co.za",
+    mapSrc:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3444.329181542643!2d31.0836!3d-29.7283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef7058caaae0b5f%3A0x11211239dfeb16b6!2sUmhlanga!5e0!3m2!1sen!2sza!4v1687956107512",
+  },
+  {
+    city: "Mpumalanga",
+    address: "109 Mlondolozi House, 6 Ehmke Street, Bombela 1200",
+    phone: "+27 31 555 7890",
+    email: "info@ntiroprojects.co.za",
+    mapSrc:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3444.329181542643!2d31.0836!3d-29.7283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef7058caaae0b5f%3A0x11211239dfeb16b6!2sUmhlanga!5e0!3m2!1sen!2sza!4v1687956107512",
   },
 ];
 
 export default function Offices() {
   return (
-    <main className="min-h-screen bg-gray-50 text-gray-800 pb-16">
+    <main className="min-h-screen bg-gray-50 text-gray-800 pb-16 text-center">
       {/* Hero */}
-      <section className=" text-white py-20 px-4 text-center">
-        <motion.h1
+      <section className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        <motion.h2
           className="text-4xl text-black md:text-5xl font-bold mb-4"
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
           Our Offices
-        </motion.h1>
+        </motion.h2>
+        <div className="flex justify-center">
+          <div className="w-50 h-1 justify-center bg-blue-400 rounded-full mb-4" />
+        </div>
         <motion.p
-          className="text-lg max-w-2xl mx-auto"
+          className="text-lg text-black max-w-2xl mx-auto"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}

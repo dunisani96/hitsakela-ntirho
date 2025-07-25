@@ -88,28 +88,28 @@ export default function Navbar() {
                 Home
               </a>
               <a
-                href="#about"
+                href="/about"
                 className="py-2 px-3 rounded hover:bg-gray-100"
-                onClick={(e) => handleSmoothScroll(e, "about")}
+                onClick={(e) => handleSmoothScroll(e, "/about")}
               >
                 About
               </a>
               <a
-                href="#testimonials"
+                href="/testimonials"
                 className="py-2 px-3 rounded hover:bg-gray-100"
                 onClick={(e) => handleSmoothScroll(e, "testimonials")}
               >
                 Testimonials
               </a>
               <a
-                href="#projects"
+                href="/projects"
                 className="py-2 px-3 rounded hover:bg-gray-100"
                 onClick={(e) => handleSmoothScroll(e, "projects")}
               >
                 Projects
               </a>
               <a
-                href="#contact"
+                href="/contact"
                 className="py-2 px-3 rounded hover:bg-gray-100"
                 onClick={(e) => handleSmoothScroll(e, "contact")}
               >
