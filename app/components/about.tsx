@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import { Users, Award, Clock, Globe } from "lucide-react";
+import { Variants } from 'framer-motion';
+
 
 const stats = [
   {
@@ -48,7 +50,7 @@ const values = [
   },
 ];
 
-const containerVariants = {
+const containerVariants:Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -59,7 +61,7 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
+const itemVariants:Variants = {
   hidden: {
     opacity: 0,
     y: 30,
@@ -74,26 +76,10 @@ const itemVariants = {
   },
 };
 
-const statsVariants = {
-  hidden: {
-    opacity: 0,
-    scale: 0.8,
-  },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      duration: 0.5,
-      ease: "easeOut",
-    },
-  },
-};
-
 export default function AboutSection() {
   return (
     <section id="about">
       {/* Hero Section */}
-
 
       <section className="bg-white ">
         <motion.div
@@ -113,18 +99,7 @@ export default function AboutSection() {
           <div className="flex justify-center">
             <div className="w-24 h-1 bg-blue-400 rounded-full mb-4" />
           </div>
-          {/* <motion.p
-              className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-            >
-              We are a dynamic group of companies united by a shared commitment
-              to excellence, innovation, and sustainable growth. With decades of
-              combined experience across multiple sectors, we deliver
-              comprehensive solutions that drive success for our clients and
-              communities.
-            </motion.p> */}
+         
         </motion.div>
 
         <motion.div>
@@ -143,34 +118,6 @@ export default function AboutSection() {
         <div className="absolute bottom-20 left-10 w-96 h-96 bg-gradient-to-tr from-cyan-100 to-blue-100 rounded-full blur-3xl opacity-15" />
 
         <div className="max-w-7xl mx-auto relative z-10">
-          {/* Header */}
-          {/* <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: -30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
-            <motion.h2
-              className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              About Our Group
-            </motion.h2>
-            <motion.p
-              className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-            >
-              We are a dynamic group of companies united by a shared commitment
-              to excellence, innovation, and sustainable growth. With decades of
-              combined experience across multiple sectors, we deliver
-              comprehensive solutions that drive success for our clients and
-              communities.
-            </motion.p>
-          </motion.div> */}
 
           {/* Main Content Grid */}
           <div className="">
@@ -182,14 +129,7 @@ export default function AboutSection() {
               className="space-y-8 w-full"
             >
               <motion.div variants={itemVariants} className="text-center">
-                {/* <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                  About our group
-                </h3> */}
-
-              
-
-              
-
+        
                 <div className="mt-20 text-left grid grid-cols-2 gap-6">
                   <div>
                     <p className="text-gray-900 mb-6 text-2lg tracking-normal text-lg/8 font-normal">
@@ -245,72 +185,6 @@ export default function AboutSection() {
             {/* Right Content - Image Placeholder */}
           </div>
 
-          {/* Stats Section */}
-          {/* <motion.div
-            className="grid grid-cols-2 lg:grid-cols-4 gap-8"
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-          >
-            {stats.map((stat, index) => {
-              const Icon = stat.icon;
-              return (
-                <motion.div
-                  key={stat.label}
-                  variants={statsVariants}
-                  whileHover={{
-                    scale: 1.05,
-                    transition: { duration: 0.2 },
-                  }}
-                  className="text-center group"
-                >
-                  <div className="relative mb-4">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl mb-4 group-hover:shadow-lg transition-shadow duration-300">
-                      <Icon className="w-8 h-8 text-white" />
-                    </div>
-                  </div>
-                  <motion.div
-                    className="text-3xl font-bold text-gray-900 mb-2"
-                    initial={{ opacity: 0, scale: 0.5 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 0.5 + index * 0.1, duration: 0.5 }}
-                  >
-                    {stat.number}
-                  </motion.div>
-                  <h4 className="font-semibold text-gray-900 mb-2">
-                    {stat.label}
-                  </h4>
-                  <p className="text-sm text-gray-600">{stat.description}</p>
-                </motion.div>
-              );
-            })}
-          </motion.div> */}
-
-          {/* Call to Action */}
-          {/* <motion.div
-            className="text-center mt-16"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.2 }}
-          >
-            <motion.button
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 mr-4"
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
-              }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Get In Touch
-            </motion.button>
-            <motion.button
-              className="inline-flex items-center px-8 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-full hover:border-gray-400 hover:bg-gray-50 transition-all duration-300"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              View Our Projects
-            </motion.button>
-          </motion.div> */}
         </div>
       </section>
     </section>
