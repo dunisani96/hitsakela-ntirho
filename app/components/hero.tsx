@@ -52,8 +52,7 @@ export default function HeroSection() {
             <Link href="#about">
               <Button
                 size="lg"
-                className="text-white font-semibold bg-gradient-to-r from-sky-500 to-blue-400 hover:from-blue-600 hover:to-blue-700"
-              >
+                className="text-white font-semibold bg-gradient-to-r from-sky-500 to-blue-400 hover:from-blue-600 hover:to-blue-700" variant={undefined}              >
                 View Our Group of Companies
               </Button>
             </Link>
