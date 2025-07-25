@@ -97,8 +97,7 @@ export default function ProjectsPage() {
                 <Link href={project.link}>
                   <Button
                     variant="outline"
-                    className="w-full bg-white sm:w-auto flex items-center justify-center gap-2 text-blue-500 border-blue-500 hover:bg-blue-50"
-                  >
+                    className="w-full bg-white sm:w-auto flex items-center justify-center gap-2 text-blue-500 border-blue-500 hover:bg-blue-50" size={undefined}                  >
                     View Project <ArrowRight size={18} />
                   </Button>
                 </Link>

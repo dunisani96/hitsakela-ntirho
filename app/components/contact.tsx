@@ -55,16 +55,16 @@ export default function ContactSection() {
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formStatus, setFormStatus] = useState(null);
+  const [formStatus, setFormStatus] = useState<string>("");
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e:any) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e:any) => {
     e.preventDefault();
     setIsSubmitting(true);
     try {
@@ -242,10 +242,7 @@ export default function ContactSection() {
                   type="submit"
                   disabled={isSubmitting}
                   className="w-full sm:w-auto px-6 py-3 text-white bg-blue-500 hover:bg-blue-600 flex items-center justify-center gap-2 text-sm sm:text-base"
-                  aria-label={
-                    isSubmitting ? "Submitting message" : "Send message"
-                  }
-                >
+                  aria-label={isSubmitting ? "Submitting message" : "Send message"} variant={undefined} size={undefined}                >
                   {isSubmitting ? (
                     <>
                       <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />

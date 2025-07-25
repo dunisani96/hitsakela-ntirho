@@ -69,8 +69,6 @@ export default function Footer() {
             <Button
               type="submit"
               className="inline-flex items-center px-6 py-3 text-sm sm:text-base font-semibold text-white border-2 border-white bg-transparent rounded-lg hover:bg-white hover:text-gray-900 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 group transition-all duration-300"
-              whileHover={{ x: 5, scale: 1.05 }}
-              transition={{ duration: 0.2 }}
             >
               Send Message
               <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-200 group-hover:translate-x-1" />

@@ -1,6 +1,6 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { motion, Variants } from "framer-motion"
 import { Building2, Zap, Shield, TreePine, Truck, Heart } from "lucide-react"
 
 const sectors = [
@@ -55,7 +55,7 @@ const containerVariants = {
   },
 }
 
-const cardVariants = {
+const cardVariants:Variants = {
   hidden: {
     opacity: 0,
     y: 50,
@@ -72,7 +72,7 @@ const cardVariants = {
   },
 }
 
-const iconVariants = {
+const iconVariants:Variants = {
   hover: {
     scale: 1.1,
     rotate: 5,

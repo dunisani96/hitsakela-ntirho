@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { ArrowRight, Star } from "lucide-react";
 
 const services = [
@@ -84,7 +84,7 @@ const containerVariants = {
   },
 };
 
-const cardVariants = {
+const cardVariants:Variants = {
   hidden: { opacity: 0, y: 60, scale: 0.9 },
   visible: {
     opacity: 1,
@@ -94,7 +94,7 @@ const cardVariants = {
   },
 };
 
-const imageVariants = {
+const imageVariants:Variants = {
   hover: {
     scale: 1.1,
     transition: { duration: 0.4, ease: "easeOut" },
@@ -154,19 +154,7 @@ export default function ServicesSection() {
               className="group relative flex flex-col h-full"
             >
               <div className="bg-white overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col h-full">
-                {/* Badge */}
-                {service.featured && (
-                  <motion.div
-                    className="absolute top-4 right-4 z-20 bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center space-x-1"
-                    initial={{ opacity: 0, scale: 0 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 0.5 + index * 0.1 }}
-                  >
-                    <Star className="w-3 h-3" />
-                    <span>Featured</span>
-                  </motion.div>
-                )}
-
+               
                 {/* Image */}
                 <div className="relative h-48 overflow-hidden flex-shrink-0">
                   <motion.img
