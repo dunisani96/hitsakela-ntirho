@@ -10,7 +10,7 @@ export default function TeamSection() {
       name: "Bonnie Green",
       role: "CEO & Web Developer",
       description: "Bonnie drives the technical strategy of the platform and brand.",
-      image: "/avatars/bonnie-green.png", // Placeholder: replace with your image path
+      image: "/dev.png", // Placeholder: replace with your image path
       socials: [
         { icon: <Facebook className="w-5 h-5" />, href: "#" },
         { icon: <Twitter className="w-5 h-5" />, href: "#" },
@@ -22,7 +22,7 @@ export default function TeamSection() {
       name: "Jese Leos",
       role: "CTO",
       description: "Jese drives the technical strategy of the platform and brand.",
-      image: "/avatars/jese-leos.png", // Placeholder: replace with your image path
+      image: "/man.png", // Placeholder: replace with your image path
       socials: [
         { icon: <Facebook className="w-5 h-5" />, href: "#" },
         { icon: <Twitter className="w-5 h-5" />, href: "#" },
@@ -34,7 +34,7 @@ export default function TeamSection() {
       name: "Michael Gough",
       role: "Senior Front-end Developer",
       description: "Michael drives the technical strategy of the platform and brand.",
-      image: "/avatars/michael-gough.png", // Placeholder: replace with your image path
+      image: "/boy.png", // Placeholder: replace with your image path
       socials: [
         { icon: <Facebook className="w-5 h-5" />, href: "#" },
         { icon: <Twitter className="w-5 h-5" />, href: "#" },
@@ -46,7 +46,7 @@ export default function TeamSection() {
       name: "Lana Byrd",
       role: "Marketing & Sales",
       description: "Lana drives the technical strategy of the platform and brand.",
-      image: "/avatars/lana-byrd.png", // Placeholder: replace with your image path
+      image: "/woman.png", // Placeholder: replace with your image path
       socials: [
         { icon: <Facebook className="w-5 h-5" />, href: "#" },
         { icon: <Twitter className="w-5 h-5" />, href: "#" },
@@ -63,6 +63,9 @@ export default function TeamSection() {
           <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">
             Our Team
           </h2>
+                    <div className="flex justify-center">
+            <div className="w-24 h-1 bg-blue-400 rounded-full mb-4" />
+          </div>
           <p className="font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">
             Meet the dedicated professionals behind our group of companies, driving
             innovation and excellence across all our services.

@@ -19,15 +19,12 @@ const Home = () => {
     <div>
       <Navbar />
       <div className="mt-12"></div>
-      {/* <HeroBanner/> */}
       <HeroSection />
       <OutlineButton name={"Contact Us"} color="blue" url={"/contact"}/>
       <Carousel/>
       <AboutSection />
       <Team/>
       <ServicesSection />
-      <Projects/>
-      <Testimonials/>
       <ContactSection />
       <Offices/>
       <Footer />

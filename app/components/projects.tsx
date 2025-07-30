@@ -5,42 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-// Sample project data (replace with your actual data)
-const projects = [
-  {
-    id: 1,
-    title: "Construction Project Alpha",
-    description:
-      "A large-scale commercial building project completed with cutting-edge sustainable materials and innovative design.",
-    image: "/project-alpha.jpg",
-    link: "/projects/alpha",
-  },
-  {
-    id: 2,
-    title: "Residential Development Beta",
-    description:
-      "A modern residential complex featuring eco-friendly homes with smart technology integration.",
-    image: "/project-beta.jpg",
-    link: "/projects/beta",
-  },
-  {
-    id: 3,
-    title: "Infrastructure Upgrade Gamma",
-    description:
-      "A city-wide infrastructure overhaul, including roads, bridges, and public utilities, completed on time and within budget.",
-    image: "/project-gamma.jpg",
-    link: "/projects/gamma",
-  },
-  {
-    id: 4,
-    title: "Industrial Plant Delta",
-    description:
-      "A state-of-the-art industrial facility designed for maximum efficiency and environmental compliance.",
-    image: "/project-delta.jpg",
-    link: "/projects/delta",
-  },
-];
+import { projects } from "@/data/projects";
 
 export default function ProjectsPage() {
   return (
@@ -81,7 +46,7 @@ export default function ProjectsPage() {
                   alt={`${project.title} project image`}
                   fill
                   className="object-cover"
-                  priority={project.id === 1} // Priority for first image
+                  priority={project.id === 1}
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
               </div>
@@ -94,10 +59,11 @@ export default function ProjectsPage() {
                 <p className="text-sm sm:text-base text-neutral-600 mb-4 flex-1">
                   {project.description}
                 </p>
-                <Link href={project.link}>
+                <Link href={`/projects/${project.link.split("/").pop()}`}> {/* Updated link */}
                   <Button
                     variant="outline"
-                    className="w-full bg-white sm:w-auto flex items-center justify-center gap-2 text-blue-500 border-blue-500 hover:bg-blue-50" size={undefined}                  >
+                    className="w-full bg-white sm:w-auto flex items-center justify-center gap-2 text-blue-500 border-blue-500 hover:bg-blue-50"
+                  >
                     View Project <ArrowRight size={18} />
                   </Button>
                 </Link>
