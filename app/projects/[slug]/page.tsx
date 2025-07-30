@@ -3,12 +3,10 @@
 import { projects } from "@/data/projects";
 import { testimonials } from "@/data/testimonials";
 import Image from "next/image";
-import { notFound } from "next/navigation";
+import {useRouter } from "next/navigation";
 import { motion, Variants } from "framer-motion";
+import { useEffect } from "react";
 
-type Props = {
-  params: { slug: string };
-};
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -51,10 +49,17 @@ const cardVariants: Variants = {
 
 
 
-export default function ProjectDetail({ params }: Props) {
+export default function ProjectDetail({ params }: { params: { slug: string } }) {
+  const router = useRouter();
   const project = projects.find((p) => p.link.endsWith(`/${params.slug}`));
-  if (!project) return notFound();
 
+  useEffect(() => {
+    if (!project) {
+      router.push("/404"); // or any fallback route
+    }
+  }, [project]);
+
+  if (!project) return null;
   return (
     <div className="w-full bg-white">
       {/* Hero Section */}
