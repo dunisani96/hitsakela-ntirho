@@ -7,7 +7,7 @@ import { notFound } from "next/navigation";
 import { motion, Variants } from "framer-motion";
 
 interface Props {
-  params: { slug: string };
+  params: Promise< { slug: string }>;
 }
 
 const containerVariants: Variants = {
