@@ -49,6 +49,12 @@ const cardVariants: Variants = {
   },
 };
 
+export async function generateStaticParams() {
+  return projects.map((project) => ({
+    slug: project.link.split("/").pop(),
+  }));
+}
+
 export default function ProjectDetail({ params }: Props) {
   const project = projects.find((p) => p.link.endsWith(`/${params.slug}`));
   if (!project) return notFound();
