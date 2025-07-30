@@ -21,7 +21,7 @@ const containerVariants: Variants = {
   },
 };
 
-const itemVariants: Variants = {""
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: {
     opacity: 1,
@@ -49,11 +49,7 @@ const cardVariants: Variants = {
   },
 };
 
-// export async function generateStaticParams() {
-//   return projects.map((project) => ({
-//     slug: project.link.split("/").pop(),
-//   }));
-// }
+
 
 export default function ProjectDetail({ params }: Props) {
   const project = projects.find((p) => p.link.endsWith(`/${params.slug}`));
