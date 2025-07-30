@@ -137,23 +137,7 @@ export default function ProjectDetail({ params }: ProjectDetailProps) {
               <p className="text-gray-700 leading-relaxed mb-6 text-lg">
                 {project.description}
               </p>
-              {project.technologies && (
-                <div className="mb-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                    Technologies Used
-                  </h3>
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech, index) => (
-                      <span
-                        key={index}
-                        className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              )}
+             
             </motion.div>
             <motion.div variants={itemVariants}>
               <div className="relative h-80 rounded-lg overflow-hidden shadow-lg">
