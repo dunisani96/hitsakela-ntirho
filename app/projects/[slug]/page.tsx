@@ -6,9 +6,9 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { motion, Variants } from "framer-motion";
 
-interface Props {
-  params: Promise< { slug: string }>;
-}
+type Props = {
+  params: { slug: string };
+};
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -58,8 +58,8 @@ export default function ProjectDetail({ params }: Props) {
       {/* Hero Section */}
       <section className="w-full py-16 px-0 relative overflow-hidden">
         {/* Decorative Background Circles */}
-        <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-80 h-80 rounded-full blur-3xl" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full blur-3xl bg-blue-200" />
+        <div className="absolute bottom-0 right-1/4 w-80 h-80 rounded-full blur-3xl bg-pink-200" />
 
         <motion.div
           className="relative w-full h-[60vh] overflow-hidden rounded-none shadow-lg"
@@ -94,8 +94,8 @@ export default function ProjectDetail({ params }: Props) {
       {/* Testimonials Section */}
       <section className="w-full py-16 px-4 bg-blue-50 relative overflow-hidden">
         {/* Decorative Background Circles */}
-        <div className="absolute top-0 left-1/3 w-80 h-80 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/3 w-96 h-96 rounded-full blur-3xl" />
+        <div className="absolute top-0 left-1/3 w-80 h-80 rounded-full blur-3xl bg-green-100" />
+        <div className="absolute bottom-0 right-1/3 w-96 h-96 rounded-full blur-3xl bg-yellow-100" />
 
         <motion.div
           className="max-w-7xl mx-auto relative z-10"
@@ -120,7 +120,9 @@ export default function ProjectDetail({ params }: Props) {
                 whileHover={{ y: -12, transition: { duration: 0.3 } }}
                 className="group bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100"
               >
-                <p className="text-gray-700 mb-4 leading-relaxed">“{t.message}”</p>
+                <p className="text-gray-700 mb-4 leading-relaxed">
+                  “{t.message}”
+                </p>
                 <p className="font-semibold text-blue-700">- {t.name}</p>
               </motion.div>
             ))}
