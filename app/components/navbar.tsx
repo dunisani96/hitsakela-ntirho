@@ -57,21 +57,21 @@ export default function Navbar() {
               onClick={(e) => handleSmoothScroll(e, "testimonials")}
               className="hover:text-blue-600"
             >
-              Testimonials
+              Contact
             </a>
             <a
               href="#projects"
               onClick={(e) => handleSmoothScroll(e, "projects")}
               className="hover:text-blue-600"
             >
-              Projects
+              Services{" "}
             </a>
             <a
               href="#contact"
               onClick={(e) => handleSmoothScroll(e, "contact")}
               className="hover:text-blue-600"
             >
-              Contact
+              Our team
             </a>
           </div>
         </div>
@@ -99,21 +99,21 @@ export default function Navbar() {
                 className="py-2 px-3 rounded hover:bg-gray-100"
                 onClick={(e) => handleSmoothScroll(e, "testimonials")}
               >
-                Testimonials
+                Contact
               </a>
               <a
                 href="/projects"
                 className="py-2 px-3 rounded hover:bg-gray-100"
                 onClick={(e) => handleSmoothScroll(e, "projects")}
               >
-                Projects
+                Services
               </a>
               <a
                 href="/contact"
                 className="py-2 px-3 rounded hover:bg-gray-100"
                 onClick={(e) => handleSmoothScroll(e, "contact")}
               >
-                Contact
+                Our Team
               </a>
             </div>
           </div>

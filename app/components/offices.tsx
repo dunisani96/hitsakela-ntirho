@@ -3,41 +3,40 @@
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail } from "lucide-react";
 
+
+const API_KEY= "AIzaSyDUV8mmfRam2DrQ4vTgVk4B54xfUatNxM8";
+
 const offices = [
   {
     city: "Head Office",
-    address: "Suite 4,, The Chambers, 37a Grobler Street, Polokwane, 0700",
+    address: "Suite 4, The Chambers, 37A Grobler Street, Polokwane, 0700",
     phone: "+27 15 291 1619",
     email: "info@ntiroprojects.co.za",
-
-    mapSrc:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.075961825475!2d28.0588!3d-26.1076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9509e622cf9f47%3A0x429d4739ec5df50a!2sSandton!5e0!3m2!1sen!2sza!4v1687955998505",
+    mapSrc: `https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=37A+Grobler+Street,Polokwane,0700,South+Africa`,
   },
   {
     city: "Western Cape",
-    address: "456 Long Street, CBD, 8000",
+    address: "456 Long Street, CBD, Cape Town, 8000",
     phone: "+27 21 765 4321",
     email: "info@ntiroprojects.co.za",
-    mapSrc:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.498998227901!2d18.4196!3d-33.9258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc6763f8d8f49f%3A0x6cf10c5eaefc8b52!2sCape%20Town!5e0!3m2!1sen!2sza!4v1687956050622",
+    mapSrc: `https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=456+Long+Street,Cape+Town,8000,South+Africa`,
   },
   {
     city: "Gauteng",
     address: "789 Beach Road, Umhlanga, 4319",
     phone: "+27 31 555 7890",
     email: "info@ntiroprojects.co.za",
-    mapSrc:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3444.329181542643!2d31.0836!3d-29.7283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef7058caaae0b5f%3A0x11211239dfeb16b6!2sUmhlanga!5e0!3m2!1sen!2sza!4v1687956107512",
+    mapSrc: `https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=789+Beach+Road,Umhlanga,4319,South+Africa`,
   },
   {
     city: "Mpumalanga",
-    address: "109 Mlondolozi House, 6 Ehmke Street, Bombela 1200",
+    address: "109 Mlondolozi House, 6 Ehmke Street, Bombela, 1200",
     phone: "+27 31 555 7890",
     email: "info@ntiroprojects.co.za",
-    mapSrc:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3444.329181542643!2d31.0836!3d-29.7283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef7058caaae0b5f%3A0x11211239dfeb16b6!2sUmhlanga!5e0!3m2!1sen!2sza!4v1687956107512",
+    mapSrc: `https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=6+Ehmke+Street,Bombela,1200,South+Africa`,
   },
 ];
+
 
 export default function Offices() {
   return (

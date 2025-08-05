@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { projects } from "@/data/projects";
 import { testimonials } from "@/data/testimonials";
+import Navbar from "./navbar";
 
 export default function ProjectDetailPage() {
   const router = useRouter();
@@ -15,7 +16,7 @@ export default function ProjectDetailPage() {
   if (!project) return <div className="p-10 text-center">Project not found.</div>;
 
   return (
-    <div className="w-full bg-white">
+    <div className="w-full bg-white">      
       {/* Hero Section */}
       <section className="w-full py-16 bg-gray-100">
         <div className="container mx-auto px-4 text-center">
