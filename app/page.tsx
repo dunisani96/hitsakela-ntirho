@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+import React, { useEffect } from "react";
 import HeroSection from "./components/hero";
 import Navbar from "./components/navbar";
 import CompanySectors from "./components/group";
@@ -13,8 +14,17 @@ import Projects from "./components/projects";
 import Testimonials from "./components/testimonials";
 import Team from "./components/team";
 import HeroBanner from "./components/hero-banner";
+import TeamSection from "./components/team";
+import ABSection from "./components/absection";
 
 const Home = () => {
+
+const API_KEY= process.env.NEXT_PUBLIC_GOOGLE_API_KEY;
+
+  useEffect(()=>{
+    console.log("API", API_KEY)
+  })
+
   return (
     <div>
       <Navbar />
@@ -23,6 +33,7 @@ const Home = () => {
       <OutlineButton name={"Contact Us"} color="blue" url={"/contact"}/>
       <Carousel/>
       <AboutSection />
+      {/* <ABSection/> */}
       <Team/>
       <ServicesSection />
       <ContactSection />

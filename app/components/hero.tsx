@@ -89,16 +89,21 @@ export default function HeroSection() {
             transition={{ duration: 0.7, delay: 0.4 }}
           >
             <Link href="#about" className="mx-auto md:mx-0">
-              <Button
+              {/* <Button
                 size="lg"
                 className="
         text-white font-semibold 
         bg-gradient-to-r from-sky-500 to-blue-400 
+        he
         hover:from-blue-600 hover:to-blue-700
       "
               >
                 View Our Group of Companies
-              </Button>
+              </Button> */}
+
+              <button className="bg-sky-400 h-16 w-50 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded shadow">
+                View Our Group of Companies
+              </button>
             </Link>
 
             <div className="flex gap-4 mx-auto md:mx-0">

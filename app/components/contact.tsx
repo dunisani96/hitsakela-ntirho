@@ -301,7 +301,7 @@ export default function ContactSection() {
             </div>
 
             {/* Map Placeholder */}
-            <motion.div
+            {/* <motion.div
               className="bg-white rounded-lg shadow-md p-5"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -322,10 +322,10 @@ export default function ContactSection() {
               <p className="text-sm text-neutral-600 mt-2 italic">
                 Note: Replace with a Google Maps embed for an interactive map.
               </p>
-            </motion.div>
+            </motion.div> */}
 
             {/* Social Links */}
-            <motion.div
+            {/* <motion.div
               className="bg-white rounded-lg shadow-md p-5"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -351,7 +351,7 @@ export default function ContactSection() {
                   );
                 })}
               </div>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
         </div>
       </div>

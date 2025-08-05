@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { projects } from "@/data/projects";
 import { testimonials } from "@/data/testimonials";
 import Image from "next/image";
@@ -52,7 +52,9 @@ interface ProjectDetailProps {
 export default function ProjectDetail({ params }: ProjectDetailProps) {
   const router = useRouter();
   const resolvedParams = use(params);
-  const project = projects.find((p) => p.link.endsWith(`/${resolvedParams.slug}`));
+  const project = projects.find((p) =>
+    p.link.endsWith(`/${resolvedParams.slug}`)
+  );
 
   useEffect(() => {
     if (!project) {
@@ -95,7 +97,7 @@ export default function ProjectDetail({ params }: ProjectDetailProps) {
             sizes="100vw"
           />
           <div className="absolute inset-0 bg-black/30" />
-          <motion.div 
+          <motion.div
             className="absolute inset-0 flex flex-col justify-center items-center text-center px-4"
             variants={containerVariants}
             initial="hidden"
@@ -137,7 +139,13 @@ export default function ProjectDetail({ params }: ProjectDetailProps) {
               <p className="text-gray-700 leading-relaxed mb-6 text-lg">
                 {project.description}
               </p>
-             
+              {project.services && (
+                <ul className="list-disc list-inside space-y-2 text-gray-700 text-base mt-4">
+                  {project.services.map((item, idx) => (
+                    <li key={idx}>{item}</li>
+                  ))}
+                </ul>
+              )}
             </motion.div>
             <motion.div variants={itemVariants}>
               <div className="relative h-80 rounded-lg overflow-hidden shadow-lg">
@@ -181,10 +189,10 @@ export default function ProjectDetail({ params }: ProjectDetailProps) {
               <motion.div
                 key={index}
                 variants={cardVariants}
-                whileHover={{ 
-                  y: -12, 
+                whileHover={{
+                  y: -12,
                   scale: 1.02,
-                  transition: { duration: 0.3 } 
+                  transition: { duration: 0.3 },
                 }}
                 className="group bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 cursor-pointer"
               >
@@ -232,14 +240,15 @@ export default function ProjectDetail({ params }: ProjectDetailProps) {
             className="text-xl text-white/90 mb-8 leading-relaxed"
             variants={itemVariants}
           >
-            Let's discuss how we can bring your vision to life with innovative solutions.
+            Let's discuss how we can bring your vision to life with innovative
+            solutions.
           </motion.p>
           <motion.button
             variants={itemVariants}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors duration-300 shadow-lg"
-            onClick={() => router.push('/contact')}
+            onClick={() => router.push("/#contact")}
           >
             Get In Touch
           </motion.button>

@@ -6,28 +6,32 @@ import { motion, AnimatePresence } from "framer-motion";
 // Slides data: title and corresponding background image
 const slides = [
   {
+    title: "Civil And Construction",
+    image: "civil-and-construction.jpg",
+  },
+  {
     title: "Electrification",
     image: "electrification.jpg",
   },
   {
-    title: "Civil and Construction",
-    image: "civil-and-construction.jpg",
-  },
-  {
-    title: "Building the Future",
+    title: "Mechanical Engineering",
     image: "building.jpg",
   },
   {
-    title: "General Medical Supplies",
-    image: "medical.jpg",
+    title: "Plant Hire and Logistics",
+    image: "plant-hire-hero.jpg",
   },
   {
-    title: "Pest Control",
+    title: "Asphalt Cold mix manufacturing",
     image: "pest-control.jpeg",
   },
   {
-    title: "Reforestation",
+    title: "Environmental and Pest Management",
     image: "reforest.jpg",
+  },
+   {
+    title: "Medical Equipment Supply",
+    image: "medical.jpg",
   },
 ];
 

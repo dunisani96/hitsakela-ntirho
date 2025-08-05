@@ -1,10 +1,10 @@
 "use client";
-
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail } from "lucide-react";
+import { useEffect } from "react";
 
 
-const API_KEY= "AIzaSyDUV8mmfRam2DrQ4vTgVk4B54xfUatNxM8";
+const API_KEY= process.env.NEXT_PUBLIC_GOOGLE_API_KEY;
 
 const offices = [
   {
@@ -39,6 +39,8 @@ const offices = [
 
 
 export default function Offices() {
+
+
   return (
     <main className="min-h-screen bg-gray-50 text-gray-800 pb-16 text-center">
       {/* Hero */}

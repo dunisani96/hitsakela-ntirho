@@ -8,9 +8,9 @@ const services: Project[] = projects;
 
 const cardColors: Record<string, string> = {
   Construction: "bg-orange-400",
-  Electronification: "bg-blue-400",
+  Electrification: "bg-blue-400",
   "Pest Control": "bg-lime-600",
-  Vegitation: "bg-green-400",
+  Vegetation: "bg-green-400",
   "Plant Hire": "bg-yellow-400",
   Medical: "bg-purple-400",
   Mechanical: "bg-red-400",

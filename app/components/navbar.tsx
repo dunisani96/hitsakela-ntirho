@@ -53,25 +53,25 @@ export default function Navbar() {
               About
             </a>
             <a
-              href="#testimonials"
-              onClick={(e) => handleSmoothScroll(e, "testimonials")}
+              href="#contact"
+              onClick={(e) => handleSmoothScroll(e, "contact")}
               className="hover:text-blue-600"
             >
               Contact
             </a>
             <a
-              href="#projects"
-              onClick={(e) => handleSmoothScroll(e, "projects")}
+              href="#service"
+              onClick={(e) => handleSmoothScroll(e, "service")}
               className="hover:text-blue-600"
             >
-              Services{" "}
+              Services
             </a>
             <a
-              href="#contact"
-              onClick={(e) => handleSmoothScroll(e, "contact")}
+              href="#team"
+              onClick={(e) => handleSmoothScroll(e, "team")}
               className="hover:text-blue-600"
             >
-              Our team
+              Team
             </a>
           </div>
         </div>
@@ -95,23 +95,23 @@ export default function Navbar() {
                 About
               </a>
               <a
-                href="/testimonials"
+                href="/contact"
                 className="py-2 px-3 rounded hover:bg-gray-100"
-                onClick={(e) => handleSmoothScroll(e, "testimonials")}
+                onClick={(e) => handleSmoothScroll(e, "contact")}
               >
                 Contact
               </a>
               <a
-                href="/projects"
+                href="/service"
                 className="py-2 px-3 rounded hover:bg-gray-100"
-                onClick={(e) => handleSmoothScroll(e, "projects")}
+                onClick={(e) => handleSmoothScroll(e, "service")}
               >
                 Services
               </a>
               <a
-                href="/contact"
+                href="/team"
                 className="py-2 px-3 rounded hover:bg-gray-100"
-                onClick={(e) => handleSmoothScroll(e, "contact")}
+                onClick={(e) => handleSmoothScroll(e, "team")}
               >
                 Our Team
               </a>

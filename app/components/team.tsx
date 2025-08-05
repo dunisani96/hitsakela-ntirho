@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Facebook, Twitter, Github, Globe } from "lucide-react";
 
-export default function TeamSection() {
+export default function Team() {
   const teamMembers = [
     {
       name: "Bonnie Green",

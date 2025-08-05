@@ -2,8 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Users, Award, Clock, Globe } from "lucide-react";
-import { Variants } from 'framer-motion';
-
+import { Variants } from "framer-motion";
 
 const stats = [
   {
@@ -34,23 +33,18 @@ const stats = [
 
 const values = [
   {
-    title: "Quality Excellence",
+    title: "Vision",
     description:
-      "We maintain the highest standards in every project, ensuring superior results that exceed expectations.",
+      "To be a transformative leader in infrastructure, energy, environmental management, and technology services, building a better future for Africa.",
   },
   {
-    title: "Innovation Focus",
+    title: "Mission",
     description:
-      "Embracing cutting-edge technologies and methodologies to deliver modern, efficient solutions.",
-  },
-  {
-    title: "Client Partnership",
-    description:
-      "Building lasting relationships through transparent communication and collaborative approaches.",
+      "To deliver sustainable, reliable, and innovative services that meet the highest standards of quality while empowering communities, creating jobs, and driving local development.",
   },
 ];
 
-const containerVariants:Variants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -61,7 +55,7 @@ const containerVariants:Variants = {
   },
 };
 
-const itemVariants:Variants = {
+const itemVariants: Variants = {
   hidden: {
     opacity: 0,
     y: 30,
@@ -99,7 +93,6 @@ export default function AboutSection() {
           <div className="flex justify-center">
             <div className="w-24 h-1 bg-blue-400 rounded-full mb-4" />
           </div>
-         
         </motion.div>
 
         <motion.div>
@@ -118,7 +111,6 @@ export default function AboutSection() {
         <div className="absolute bottom-20 left-10 w-96 h-96 bg-gradient-to-tr from-cyan-100 to-blue-100 rounded-full blur-3xl opacity-15" />
 
         <div className="max-w-7xl mx-auto relative z-10">
-
           {/* Main Content Grid */}
           <div className="">
             {/* Left Content */}
@@ -129,62 +121,61 @@ export default function AboutSection() {
               className="space-y-8 w-full"
             >
               <motion.div variants={itemVariants} className="text-center">
-        
                 <div className="mt-20 text-left grid grid-cols-2 gap-6">
                   <div>
                     <p className="text-gray-900 mb-6 text-2lg tracking-normal text-lg/8 font-normal">
-                      Hitsakela Ntiro Projects, trading as Ntiro Projects –
-                      Group of Companies, is a dynamic and 100% black-owned
-                      South African enterprise founded in 2003. We operate
-                      across multiple sectors, delivering integrated solutions
-                      in construction, electrification, mechanical engineering,
-                      environmental services, logistics, and health technology
-                      supply. With a strong footprint in both the public and
-                      private sectors, we pride ourselves on sustainable service
-                      delivery, local empowerment, and innovation. We are driven
-                      by a mission to develop infrastructure, uplift
-                      communities, and meet the evolving needs of our continent
-                      with professionalism and excellence.
+                      <span
+                        className="
+                      text-black font-bold
+                      "
+                      >
+                        <span className="text-2xl">H</span>itsakela Ntiro
+                        Projects
+                      </span>
+                      , trading as Ntiro Projects – Group of Companies, is a
+                      dynamic and 100% black-owned South African enterprise
+                      founded in 2003. We operate across multiple sectors,
+                      delivering integrated solutions in construction,
+                      electrification, mechanical engineering, environmental
+                      services, logistics, and health technology supply. With a
+                      strong footprint in both the public and private sectors,
+                      we pride ourselves on sustainable service delivery, local
+                      empowerment, and innovation. We are driven by a mission to
+                      develop infrastructure, uplift communities, and meet the
+                      evolving needs of our continent with professionalism and
+                      excellence.
                     </p>
+                  </div>
+
+                  <div className="space-y-6">
+
+                   {values.map((value,index)=>(
+
+                    <motion.div
+                      className="flex items-center space-x-4 p-4 bg-gradient-to-tr from-sky-100 via-blue-100 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+                      whileHover={{ scale: 1.02 }}
+                    >
+                      <div>
+                        <h2 className="text-2xl font-semibold text-gray-900">
+                          {value.title}
+                        </h2>
+                        <p className="text-gray-700 text-2xl tracking-normal text-lg/8 font-normal">
+                          {value.description}
+                        </p>
+                      </div>
+                    </motion.div>
+                   )) }
                   </div>
 
                   <div>
                     
-                      <motion.div variants={itemVariants} className="pt-4">
-                        <h4 className="text-xl font-semibold text-gray-900 mb-4">
-                          Our Core Values
-                        </h4>
-                        <div className="space-y-4">
-                          {values.map((value, index) => (
-                            <motion.div
-                              key={value.title}
-                              className="flex items-start space-x-3"
-                              initial={{ opacity: 0, x: -20 }}
-                              animate={{ opacity: 1, x: 0 }}
-                              transition={{ delay: 0.6 + index * 0.1 }}
-                            >
-                              <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mt-3 flex-shrink-0" />
-                              <div>
-                                <h5 className="font-semibold text-gray-900 mb-1">
-                                  {value.title}
-                                </h5>
-                                <p className="text-gray-600">
-                                  {value.description}
-                                </p>
-                              </div>
-                            </motion.div>
-                          ))}
-                        </div>
-                      </motion.div>
-                    </div>
                   </div>
-                
+                </div>
               </motion.div>
             </motion.div>
 
             {/* Right Content - Image Placeholder */}
           </div>
-
         </div>
       </section>
     </section>
