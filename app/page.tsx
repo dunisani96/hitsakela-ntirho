@@ -10,12 +10,8 @@ import Footer from "./components/footer";
 import OutlineButton from "./components/outline-button";
 import Carousel from "./components/carousel";
 import Offices from "./components/offices";
-import Projects from "./components/projects";
-import Testimonials from "./components/testimonials";
 import Team from "./components/team";
-import HeroBanner from "./components/hero-banner";
-import TeamSection from "./components/team";
-import ABSection from "./components/absection";
+
 
 const Home = () => {
 
@@ -33,7 +29,6 @@ const API_KEY= process.env.NEXT_PUBLIC_GOOGLE_API_KEY;
       <OutlineButton name={"Contact Us"} color="blue" url={"/contact"}/>
       <Carousel/>
       <AboutSection />
-      {/* <ABSection/> */}
       <Team/>
       <ServicesSection />
       <ContactSection />
