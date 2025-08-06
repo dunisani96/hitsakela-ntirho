@@ -2,7 +2,6 @@
 import React, { useEffect } from "react";
 import HeroSection from "./components/hero";
 import Navbar from "./components/navbar";
-import CompanySectors from "./components/group";
 import AboutSection from "./components/about";
 import ServicesSection from "./components/service-section";
 import ContactSection from "./components/contact";
