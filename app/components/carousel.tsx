@@ -27,10 +27,14 @@ const slides = [
     image: "cold-mix-asphalt.jpg",
   },
   {
-    title: "Environmental And Pest Management",
+    title: "Vegetation Management",
+    image: "reforest.jpg",
+  },
+  {
+    title: "Pest Control",
     image: "pest-control.jpeg",
   },
-   {
+  {
     title: "Medical Equipment Supply",
     image: "general-med.jpg",
   },
@@ -51,7 +55,7 @@ export default function HeroSection() {
 
   return (
     <section className="relative h-[100vh] w-full overflow-hidden">
-      <AnimatePresence mode="wait">
+      <AnimatePresence>
         <motion.div
           key={currentSlide.image}
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"

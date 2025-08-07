@@ -21,9 +21,8 @@ const API_KEY= process.env.NEXT_PUBLIC_GOOGLE_API_KEY;
   })
 
   return (
-    <div>
-      <Navbar />
-      <div className="mt-12"></div>
+    <div className="py-28 bg-white" >
+      <Navbar/>
       <HeroSection />
       <OutlineButton name={"Contact Us"} color="blue" url={"/contact"}/>
       <Carousel/>

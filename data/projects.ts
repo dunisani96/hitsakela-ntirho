@@ -107,7 +107,7 @@ export const projects: Project[] = [
             "Turnkey project delivery including planning and execution"
         ],
         image: "/civil-construc.jpg",
-        link: "/projects/civil-and-construction",
+        link: "/services/civil-and-construction",
         category: "Construction"
     },
     {
@@ -125,7 +125,7 @@ export const projects: Project[] = [
 
         ],
         image: "/electrif.jpg",
-        link: "/projects/electronification",
+        link: "/services/electrification",
         category: "Electrification"
     },
     {
@@ -142,7 +142,7 @@ export const projects: Project[] = [
             "Water reticulation pump station installation."
         ],
         image: "/mechanical-works.jpg",
-        link: "/projects/mechanical-works",
+        link: "/services/mechanical-works",
         category: "Mechanical"
     },
     {
@@ -157,7 +157,7 @@ export const projects: Project[] = [
             "Equipment transport and support for remote sites."
         ],
         image: "/plant-hire-hero.jpg",
-        link: "/projects/plant-hire",
+        link: "/services/plant-hire",
         category: "Plant Hire"
     },
     {
@@ -172,7 +172,7 @@ export const projects: Project[] = [
             "Weather-resistant, flexible application year-round."
         ],
         image: "/cold-mix-asphalt.jpg",
-        link: "/projects/asphalt-cold-mix",
+        link: "/services/asphalt-cold-mix",
         category: "Asphalt"
     },
     {
@@ -186,7 +186,7 @@ export const projects: Project[] = [
             "General site clearance and slope maintenance.",
         ],
         image: "/vegetation.jpg",
-        link: "/projects/vegetation-management",
+        link: "/services/vegetation-management",
         category: "Vegetation"
     },
     {
@@ -202,7 +202,7 @@ export const projects: Project[] = [
 
         ],
         image: "/pest-control.jpeg",
-        link: "/projects/pest-control",
+        link: "/services/pest-control",
         category: "Pest Control"
     },
     {
@@ -220,7 +220,7 @@ export const projects: Project[] = [
             "COVID-19 rapid response supply chain management."
         ],
         image: "/general-med.jpg",
-        link: "/projects/general-medical-supplies",
+        link: "/services/general-medical-supplies",
         category: "Medical"
     },
 ];

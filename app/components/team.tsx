@@ -11,7 +11,7 @@ export default function Team() {
       name: "Bonnie Green",
       role: "CEO & Web Developer",
       description: "Bonnie drives the technical strategy of the platform and brand.",
-      image: "/dev.png", // Placeholder: replace with your image path
+      image: "/avatar.jpeg", // Placeholder: replace with your image path
       socials: [
         { icon: <Facebook className="w-5 h-5" />, href: "#" },
         { icon: <Twitter className="w-5 h-5" />, href: "#" },
@@ -23,7 +23,7 @@ export default function Team() {
       name: "Jese Leos",
       role: "CTO",
       description: "Jese drives the technical strategy of the platform and brand.",
-      image: "/man.png", // Placeholder: replace with your image path
+      image: "/avatar.jpeg", // Placeholder: replace with your image path
       socials: [
         { icon: <Facebook className="w-5 h-5" />, href: "#" },
         { icon: <Twitter className="w-5 h-5" />, href: "#" },
@@ -35,7 +35,7 @@ export default function Team() {
       name: "Michael Gough",
       role: "Senior Front-end Developer",
       description: "Michael drives the technical strategy of the platform and brand.",
-      image: "/boy.png", // Placeholder: replace with your image path
+      image: "/avatar.jpeg", // Placeholder: replace with your image path
       socials: [
         { icon: <Facebook className="w-5 h-5" />, href: "#" },
         { icon: <Twitter className="w-5 h-5" />, href: "#" },
@@ -47,7 +47,7 @@ export default function Team() {
       name: "Lana Byrd",
       role: "Marketing & Sales",
       description: "Lana drives the technical strategy of the platform and brand.",
-      image: "/woman.png", // Placeholder: replace with your image path
+      image: "/avatar.jpeg", // Placeholder: replace with your image path
       socials: [
         { icon: <Facebook className="w-5 h-5" />, href: "#" },
         { icon: <Twitter className="w-5 h-5" />, href: "#" },

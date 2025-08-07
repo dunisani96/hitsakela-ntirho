@@ -17,15 +17,15 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative w-full h-[85vh] overflow-hidden">
+    <section className="relative w-full h-[90vh] overflow-hidden ">
       {/* Background Overlay */}
       <div className="absolute inset-0 bg-white z-0" />
 
       {/* Main Container */}
       <div className="relative z-10 grid grid-cols-1 md:flex md:flex-row h-full w-full">
         {/* Left Section (Text) */}
-        <div className="flex flex-col justify-center items-center md:items-start text-center md:text-left px-6 sm:px-10 h-full">
-          <motion.div
+        <div className="flex flex-col  items-center md:items-start text-center md:text-left px-6 sm:px-10 h-full">
+          {/* <motion.div
             className="mb-10 "
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -39,19 +39,25 @@ export default function HeroSection() {
               className="object-contain w-full max-w-[100vw] sm:max-w-3xl md:max-w-2xl"
               priority
             />
+          </motion.div> */}
+          <motion.div
+            className=" pt-20 mb-10"
+            initial={{ opacity: 0, y: 20 }} // Start from below
+            animate={{ opacity: 1, y: -20 }} // Move up to a higher position
+            transition={{ duration: 0.6, ease: "easeOut" }} // Smooth easing for natural motion
+          >
+            <Image
+              src="/ntiro-logo.svg"
+              alt="Ntiro Logo"
+              width={1000}
+              height={200}
+              className="object-contain w-full max-w-[100vw] sm:max-w-3xl md:max-w-2xl"
+              priority
+            />
           </motion.div>
 
-          {/* <motion.h1
-            className=" grid sm:grid-cols-1 justify-center text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-neutral-800"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-          >
-            <div className="w-24 md:w-130 h-2 bg-sky-400 rounded-full mb-4" />
-            Group of Companies
-          </motion.h1> */}
           <motion.h1
-            className="flex flex-col md:pt-10 items-center text-3xl sm:text-4xl md:text-6xl font-semibold tracking-tight text-neutral-800"
+            className="flex flex-col md:pt-10 items-center text-4xl sm:text-4xl md:text-6xl font-semibold tracking-tight text-neutral-800"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
@@ -144,8 +150,6 @@ export default function HeroSection() {
             </AnimatePresence>
           </div>
         </div>
-
-        
       </div>
 
       {/* Scroll Indicator */}

@@ -21,13 +21,13 @@ export default function Navbar() {
   };
 
   return (
-    <div className="text-blue-400 font-semibold w-full flex flex-col fixed top-0 z-50">
+    <div className="backdrop-blur-xs text-blue-400 font-semibold w-full flex flex-col fixed top-0 z-50">
       {/* Main Navbar */}
-      <div className="w-full bg-white py-4 px-4 md:px-6 border-b border-gray-300 shadow-sm">
+      <div className="w-full  bg-transparent py-4 px-4 md:px-6 border-b border-gray-300 shadow-sm">
         <div className="container mx-auto flex justify-between items-center min-h-[80px]">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
-            <span className="text-2xl font-bold tracking-tight text-gray-700">
+            <span className="text-2xl font-bold tracking-tight text-gray-900">
               Hitsakela Ntiro Projects
             </span>
           </Link>
@@ -41,7 +41,7 @@ export default function Navbar() {
           </button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-10 text-gray-600 font-semibold">
+          <div className="hidden md:flex items-center space-x-10 text-gray-900 font-semibold">
             <a href="/" className="hover:text-blue-600">
               Home
             </a>
