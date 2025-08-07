@@ -84,9 +84,9 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
           >
-            <Link href="#about" className="mx-auto md:mx-0">
+            <Link href="#service" className="mx-auto md:mx-0">
               <button className="bg-sky-400 h-16 w-50 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded shadow">
-                View Our Group of Companies
+                View Our Group Of Companies
               </button>
             </Link>
 

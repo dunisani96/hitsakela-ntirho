@@ -59,7 +59,7 @@ export default function Offices() {
           <div className="w-50 h-1 justify-center bg-blue-400 rounded-full mb-4" />
         </div>
         <motion.p
-          className="text-lg text-black max-w-2xl mx-auto"
+          className="text-lg text-black max-w-2xl mx-auto font-light text-gray-600 "
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}

@@ -162,7 +162,7 @@ export const projects: Project[] = [
     },
     {
         id: 5,
-        title: "Asphalt Cold mix manufacturing",
+        title: "Asphalt Cold Mix Manufacturing",
         description:
             "We produce and supply ready-to-use asphalt materials.",
         services: [
@@ -209,7 +209,7 @@ export const projects: Project[] = [
         id: 8,
         title: " Medical Equipment Supply",
         description:
-            " ",
+            "We respond to healthcare and emergency needs ",
         services: [
             "Hospital furniture (beds, trolleys, wheelchairs, etc.).",
             "ICU and general ward equipment.",

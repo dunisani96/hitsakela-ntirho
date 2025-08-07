@@ -21,7 +21,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="backdrop-blur-xs text-blue-400 font-semibold w-full flex flex-col fixed top-0 z-50">
+    <div className="backdrop-blur-lg text-blue-400 font-semibold w-full flex flex-col fixed top-0 z-50">
       {/* Main Navbar */}
       <div className="w-full  bg-transparent py-4 px-4 md:px-6 border-b border-gray-300 shadow-sm">
         <div className="container mx-auto flex justify-between items-center min-h-[80px]">
