@@ -16,22 +16,24 @@ const offices = [
   },
   {
     city: "Western Cape",
-    address: "456 Long Street, CBD, Cape Town, 8000",
-    phone: "+27 21 765 4321",
+    address: "Unit 3, 8 End Street Bellville",
+    phone: "+27 21 002 8727",
     email: "info@ntiroprojects.co.za",
-    mapSrc: `https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=456+Long+Street,Cape+Town,8000,South+Africa`,
+    mapSrc: `https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=8+End+Street+Bellville+Western+Cape+South+Africa`,
+
   },
   {
     city: "Gauteng",
-    address: "789 Beach Road, Umhlanga, 4319",
-    phone: "+27 31 555 7890",
+    address: "Shop 263, Louis Pasteur 254 Sisulu Street, Pretoria, 0001",
+    phone: "+27 12 320 0690",
     email: "info@ntiroprojects.co.za",
-    mapSrc: `https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=789+Beach+Road,Umhlanga,4319,South+Africa`,
+    mapSrc: `https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=Shop+263,+Louis+Pasteur,+254+Sisulu+Street,+Pretoria,+0001,+South+Africa`,
+
   },
   {
     city: "Mpumalanga",
     address: "109 Mlondolozi House, 6 Ehmke Street, Bombela, 1200",
-    phone: "+27 31 555 7890",
+    phone: "+27 13 752 2606",
     email: "info@ntiroprojects.co.za",
     mapSrc: `https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=6+Ehmke+Street,Bombela,1200,South+Africa`,
   },

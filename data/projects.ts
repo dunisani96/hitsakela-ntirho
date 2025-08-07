@@ -130,12 +130,16 @@ export const projects: Project[] = [
     },
     {
         id: 3,
-        title: "Mechanical works",
+        title: "Mechanical Works",
         description:
-            "Comprehensive pest control solutions using eco-friendly methods to protect your property year-round.",
+            "We provide solutions in heavy mechanical works",
         services: [
-            "Pest control using eco-friendly methods",
-            "Protection of property year-round"
+            "Borehole drilling, casing, and pump installation.",
+            "Fabrication and erection of steel structures.",
+            "Installation of industrial machinery and equipment.",
+            "Welding, pipe fitting, and plant maintenance.",
+            "On-site mechanical troubleshooting and repairs.",
+            "Water reticulation pump station installation."
         ],
         image: "/mechanical-works.jpg",
         link: "/projects/mechanical-works",
@@ -143,13 +147,14 @@ export const projects: Project[] = [
     },
     {
         id: 4,
-        title: "Plant Hire",
+        title: "Plant Hire And Logistics",
         description:
-            "Professional landscaping services including design, installation, and ongoing maintenance for beautiful outdoor spaces.",
+            "We provide reliable machinery and logistical support for project delivery",
         services: [
-            "Landscaping design",
-            "Installation of outdoor features",
-            "Ongoing maintenance for outdoor spaces"
+            "TLBs, graders, rollers, excavators, and tipper trucks for hire.",
+            "Logistics for material delivery, site clearance, and earth movement.",
+            "Fleet maintenance and operator supply.",
+            "Equipment transport and support for remote sites."
         ],
         image: "/plant-hire-hero.jpg",
         link: "/projects/plant-hire",
@@ -159,10 +164,12 @@ export const projects: Project[] = [
         id: 5,
         title: "Asphalt Cold mix manufacturing",
         description:
-            "Wide range of construction and industrial equipment available for short-term and long-term rental projects.",
+            "We produce and supply ready-to-use asphalt materials.",
         services: [
-            "Cold mix asphalt manufacturing",
-            "Construction and industrial equipment rental"
+            "High-performance cold mix asphalt suitable for: Pothole patching, Driveway repairs, Temporary road works",
+            "Packaging in 25kg or bulk supply.",
+            "On-site asphalt patching support for municipalities.",
+            "Weather-resistant, flexible application year-round."
         ],
         image: "/cold-mix-asphalt.jpg",
         link: "/projects/asphalt-cold-mix",
@@ -172,9 +179,11 @@ export const projects: Project[] = [
         id: 6,
         title: "Vegetation Management",
         description:
-            "Quality medical supplies and equipment for healthcare facilities, clinics, and medical professionals.",
+            "Our division ensures a safe, clean, and eco-friendly environment",
         services: [
-            "Vegetation management services"
+            "Vegetation management, bush clearing, and tree felling.",
+            "Firebreak creation and alien plant removal. ",
+            "General site clearance and slope maintenance.",
         ],
         image: "/vegetation.jpg",
         link: "/projects/vegetation-management",
@@ -186,8 +195,11 @@ export const projects: Project[] = [
         description:
             "Comprehensive mechanical solutions including repairs and custom-built systems.",
         services: [
-            "Mechanical repairs",
-            "Custom-built systems"
+            "Fumigation",
+            " Rodent control",
+            "Cockroach, termite and mosquito eradication",
+            "Residential, commercial, and agricultural pest solutions."
+
         ],
         image: "/pest-control.jpeg",
         link: "/projects/pest-control",
@@ -195,13 +207,17 @@ export const projects: Project[] = [
     },
     {
         id: 8,
-        title: "General Medical Supplies",
+        title: " Medical Equipment Supply",
         description:
-            "Efficient logistics services to manage supply chains and deliver goods safely.",
+            " ",
         services: [
-            "Logistics services",
-            "Supply chain management",
-            "Goods delivery"
+            "Hospital furniture (beds, trolleys, wheelchairs, etc.).",
+            "ICU and general ward equipment.",
+            "Oxygen concentrators, monitors, and ventilators.",
+            "PPE: gloves, masks, gowns, shields, and sanitizer stations.",
+            "Mobile clinics and field hospital infrastructure.",
+            "Emergency kits, ambulatory equipment, and stretchers.",
+            "COVID-19 rapid response supply chain management."
         ],
         image: "/general-med.jpg",
         link: "/projects/general-medical-supplies",

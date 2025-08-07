@@ -135,11 +135,11 @@ export default function Footer() {
             </div>
             <div className="flex items-center gap-3">
               <Phone className="w-5 h-5" />
-              <p>+27 12 345 6789</p>
+              <p>+27 15 291 1619 </p>
             </div>
             <div className="flex items-center gap-3">
               <Mail className="w-5 h-5" />
-              <p>info@companyname.com</p>
+              <p>www.ntiroprojects.co.za</p>
             </div>
           </div>
         </motion.div>

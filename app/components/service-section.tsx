@@ -49,7 +49,7 @@ export default function ServicesSection() {
   return (
     <section
       id="service"
-      className="py-20 px-4 relative overflow-hidden bg-white"
+      className="bg-gray-50 py-20 px-4 relative overflow-hidden bg-white"
     >
       {/* Decorative Background Circles */}
       <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full blur-3xl" />
@@ -69,14 +69,14 @@ export default function ServicesSection() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Services we provide
+            Our Services
           </motion.h2>
           <div className="flex justify-center">
             <div className="w-30 h-1 bg-blue-400 rounded-full mb-4" />
           </div>
 
           <motion.p
-            className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
+            className="font-light text-gray-600 lg:mb-16 sm:text-xl "
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}

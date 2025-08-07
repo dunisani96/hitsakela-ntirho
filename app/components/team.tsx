@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Facebook, Twitter, Github, Globe } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Team() {
   const teamMembers = [
@@ -60,13 +61,18 @@ export default function Team() {
     <section className="bg-white">
       <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
         <div className="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
-          <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">
+           <motion.h2
+            className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
             Our Team
-          </h2>
+          </motion.h2>
                     <div className="flex justify-center">
             <div className="w-24 h-1 bg-blue-400 rounded-full mb-4" />
           </div>
-          <p className="font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">
+          <p className="font-light text-gray-600 lg:mb-16 sm:text-xl">
             Meet the dedicated professionals behind our group of companies, driving
             innovation and excellence across all our services.
           </p>

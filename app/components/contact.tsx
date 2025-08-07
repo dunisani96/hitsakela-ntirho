@@ -84,7 +84,7 @@ export default function ContactSection() {
       <div className="container mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <motion.div
-          className="text-center mb-10 sm:mb-12"
+          className="  text-center mb-10 sm:mb-12"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -93,7 +93,7 @@ export default function ContactSection() {
             Get In Touch
           </h2>
           <div className="w-16 h-1.5 bg-blue-400 rounded-full mx-auto mt-3" />
-          <p className="mt-4 max-w-2xl mx-auto text-base sm:text-lg text-neutral-600">
+          <p className="text-gray-500 text-lg font-normal leading-relaxed mt-2 ">
             Ready to start your next project? Contact us today to discuss how we
             can bring your vision to life.
           </p>

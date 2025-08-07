@@ -4,33 +4,6 @@ import { motion } from "framer-motion";
 import { Users, Award, Clock, Globe } from "lucide-react";
 import { Variants } from "framer-motion";
 
-const stats = [
-  {
-    icon: Users,
-    number: "500+",
-    label: "Satisfied Clients",
-    description: "Trusted by businesses across multiple industries",
-  },
-  {
-    icon: Award,
-    number: "15+",
-    label: "Years Experience",
-    description: "Delivering excellence since our establishment",
-  },
-  {
-    icon: Clock,
-    number: "24/7",
-    label: "Support Available",
-    description: "Round-the-clock assistance when you need it",
-  },
-  {
-    icon: Globe,
-    number: "6",
-    label: "Specialized Sectors",
-    description: "Comprehensive services across diverse industries",
-  },
-];
-
 const values = [
   {
     title: "Vision",
@@ -75,7 +48,7 @@ export default function AboutSection() {
     <section id="about">
       {/* Hero Section */}
 
-      <section className="bg-white ">
+      <section className="bg-gray-50">
         <motion.div
           className="text-center mb-16 pt-16 "
           initial={{ opacity: 0, y: -30 }}
@@ -104,7 +77,7 @@ export default function AboutSection() {
         </motion.div>
       </section>
 
-      <section className="py-20 px-4 bg-white relative overflow-hidden">
+      <section className="py-20 px-4 bg-gray-50 relative overflow-hidden">
         {/* Background decorative elements */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-transparent to-purple-50/30" />
         <div className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full blur-3xl opacity-20" />
@@ -120,17 +93,18 @@ export default function AboutSection() {
               animate="visible"
               className="space-y-8 w-full"
             >
-              <motion.div variants={itemVariants} className="text-center">
+              {/* <motion.div variants={itemVariants} className="text-center">
                 <div className="mt-20 text-left grid grid-cols-2 gap-6">
                   <div>
-                    <p className="text-gray-900 mb-6 text-2lg tracking-normal text-lg/8 font-normal">
+                    <h2 className="text-black mb-2 text-2xl">About us</h2>
+                    <p className="font-light text-black mb-6 text-2lg tracking-normal text-lg/8 font-normal">
                       <span
                         className="
-                      text-black font-bold
+                      text-black font-[1000]
+                      uppercase
                       "
                       >
-                        <span className="text-2xl">H</span>itsakela Ntiro
-                        Projects
+                        Hitsakela Ntiro Projects
                       </span>
                       , trading as Ntiro Projects – Group of Companies, is a
                       dynamic and 100% black-owned South African enterprise
@@ -145,30 +119,100 @@ export default function AboutSection() {
                       evolving needs of our continent with professionalism and
                       excellence.
                     </p>
+                    <h2 className="text-black mb-2 text-2xl">Why Choose us</h2>
+                    <p className="font-light text-black mb-6 text-2lg tracking-normal text-lg/8 font-normal">
+                      Proven record in public works and infrastructure
+                      development. Experienced multi-disciplinary project teams.
+                      Black-owned, BBBEE-compliant with empowerment values.
+                      Strong safety and environmental compliance. End-to-end
+                      project execution – planning, supply, delivery, and
+                      maintenance.
+                    </p>
                   </div>
 
                   <div className="space-y-6">
-
-                   {values.map((value,index)=>(
-
-                    <motion.div
-                      className="flex items-center space-x-4 p-4 bg-gradient-to-tr from-sky-100 via-blue-100 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
-                      whileHover={{ scale: 1.02 }}
-                    >
-                      <div>
-                        <h2 className="text-2xl font-semibold text-gray-900">
-                          {value.title}
-                        </h2>
-                        <p className="text-gray-700 text-2xl tracking-normal text-lg/8 font-normal">
-                          {value.description}
-                        </p>
-                      </div>
-                    </motion.div>
-                   )) }
+                    {values.map((value) => (
+                      <motion.div
+                        className="flex items-center space-x-4 p-4 bg-gradient-to-tr from-sky-100 via-blue-100 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+                        whileHover={{ scale: 1.02 }}
+                      >
+                        <div>
+                          <h2 className="text-2xl font-semibold text-gray-900">
+                            {value.title}
+                          </h2>
+                          <p className="text-gray-700 text-2xl tracking-normal text-lg/8 font-normal">
+                            {value.description}
+                          </p>
+                        </div>
+                      </motion.div>
+                    ))}
                   </div>
 
-                  <div>
-                    
+                  <div></div>
+                </div>
+              </motion.div> */}
+
+              <motion.div variants={itemVariants} className="text-center">
+                <div className="mt-20 text-left grid grid-cols-1 md:grid-cols-12 gap-6">
+                  {/* About Text */}
+                  <div className="md:col-span-7 col-span-12 space-y-6">
+                    <h2 className="text-gray-900 text-4xl font-bold font-manrope leading-normal lg:text-start text-center">
+                      About us
+                    </h2>
+                    <p className="text-gray-600 text-lg font-normal leading-relaxed lg:text-start text-center ">
+                      Hitsakela Ntiro Projects , trading as Ntiro Projects –
+                      Group of Companies, is a dynamic and 100% black-owned
+                      South African enterprise founded in 2003. We operate
+                      across multiple sectors, delivering integrated solutions
+                      in construction, electrification, mechanical engineering,
+                      environmental services, logistics, and health technology
+                      supply. With a strong footprint in both the public and
+                      private sectors, we pride ourselves on sustainable service
+                      delivery, local empowerment, and innovation. We are driven
+                      by a mission to develop infrastructure, uplift
+                      communities, and meet the evolving needs of our continent
+                      with professionalism and excellence.
+                    </p>
+                    <h2 className="text-gray-900 text-4xl font-bold font-manrope leading-normal lg:text-start text-center">
+                      Why choose us
+                    </h2>
+                    <p className="text-gray-600 text-lg font-normal leading-relaxed lg:text-start text-center">
+                      Proven record in public works and infrastructure
+                      development. Experienced multi-disciplinary project teams.
+                      Black-owned, BBBEE-compliant with empowerment values.
+                      Strong safety and environmental compliance. End-to-end
+                      project execution – planning, supply, delivery, and
+                      maintenance.
+                    </p>
+
+                    {/* Vision and Mission Cards */}
+                    <div className="space-y-6">
+                      {values.map((value) => (
+                        <motion.div
+                          key={value.title}
+                          className="flex items-center space-x-4 p-4 bg-gradient-to-tr from-sky-50 via-blue-50 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+                          whileHover={{ scale: 1.02 }}
+                        >
+                          <div>
+                            <h2 className="text-gray-900 text-4xl font-bold font-manrope leading-normal lg:text-start text-center">
+                              {value.title}
+                            </h2>
+                            <p className="text-gray-600 text-base font-normal leading-relaxed lg:text-start text-center">
+                              {value.description}
+                            </p>
+                          </div>
+                        </motion.div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Right Side Image */}
+                  <div className="md:col-span-5 col-span-12">
+                    <img
+                      src="/construction-about.jpg"
+                      alt="Team working together"
+                      className="w-full h-full object-cover rounded-lg shadow-lg"
+                    />
                   </div>
                 </div>
               </motion.div>

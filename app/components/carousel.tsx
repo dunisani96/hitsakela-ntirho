@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { projects } from "@/data/projects";
 
 // Slides data: title and corresponding background image
 const slides = [
@@ -11,27 +12,27 @@ const slides = [
   },
   {
     title: "Electrification",
-    image: "electrification.jpg",
+    image: "electrif.jpg",
   },
   {
     title: "Mechanical Engineering",
-    image: "building.jpg",
+    image: "mechanical-works.jpg",
   },
   {
-    title: "Plant Hire and Logistics",
+    title: "Plant Hire And Logistics",
     image: "plant-hire-hero.jpg",
   },
   {
-    title: "Asphalt Cold mix manufacturing",
-    image: "pest-control.jpeg",
+    title: "Asphalt Cold Mix Manufacturing",
+    image: "cold-mix-asphalt.jpg",
   },
   {
-    title: "Environmental and Pest Management",
-    image: "reforest.jpg",
+    title: "Environmental And Pest Management",
+    image: "pest-control.jpeg",
   },
    {
     title: "Medical Equipment Supply",
-    image: "medical.jpg",
+    image: "general-med.jpg",
   },
 ];
 
