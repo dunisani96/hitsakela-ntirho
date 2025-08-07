@@ -73,9 +73,12 @@ export default function HeroSection() {
               justify-center md:justify-start
               text-center md:text-left
               gap-4
+              pl-50
+              mb-30
               absolute bottom-6
               left-1/2 -translate-x-1/2
               md:left-6 md:translate-x-0
+              items-center
   "
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -116,7 +119,7 @@ export default function HeroSection() {
             </motion.div>
 
             {/* Toggle Button */}
-            <div className="absolute bottom-4 left-4 z-50">
+            <div className="absolute bottom-4 left-4 z-50 mb-5">
               <button
                 onClick={toggleServices}
                 className="flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow hover:shadow-md transition-all"
