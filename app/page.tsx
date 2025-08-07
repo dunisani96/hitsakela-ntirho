@@ -14,12 +14,6 @@ import Team from "./components/team";
 
 const Home = () => {
 
-const API_KEY= process.env.NEXT_PUBLIC_GOOGLE_API_KEY;
-
-  useEffect(()=>{
-    console.log("API", API_KEY)
-  })
-
   return (
     <div className="py-28 bg-white" >
       <Navbar/>
