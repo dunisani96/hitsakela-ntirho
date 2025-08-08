@@ -47,7 +47,7 @@ export default function HeroSection() {
             transition={{ duration: 0.6, ease: "easeOut" }} // Smooth easing for natural motion
           >
             <Image
-              src="/ntiro-logo.svg"
+              src="/ntiro-new-logo.png"
               alt="Ntiro Logo"
               width={1000}
               height={200}
