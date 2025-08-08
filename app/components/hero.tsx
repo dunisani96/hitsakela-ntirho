@@ -25,21 +25,7 @@ export default function HeroSection() {
       <div className="relative z-10 grid grid-cols-1 md:flex md:flex-row h-full w-full">
         {/* Left Section (Text) */}
         <div className="flex flex-col  items-center md:items-start text-center md:text-left px-6 sm:px-10 h-full">
-          {/* <motion.div
-            className="mb-10 "
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <Image
-              src="/ntiro-logo.svg"
-              alt="Ntiro Logo"
-              width={1000} // increased width
-              height={200} // increased height
-              className="object-contain w-full max-w-[100vw] sm:max-w-3xl md:max-w-2xl"
-              priority
-            />
-          </motion.div> */}
+         
           <motion.div
             className=" pt-20 mb-10"
             initial={{ opacity: 0, y: 20 }} // Start from below

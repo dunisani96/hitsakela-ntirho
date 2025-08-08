@@ -1,7 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail } from "lucide-react";
-import { useEffect } from "react";
 
 
 const API_KEY= process.env.NEXT_PUBLIC_GOOGLE_API_KEY;
