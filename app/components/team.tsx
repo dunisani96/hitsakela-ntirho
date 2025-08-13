@@ -45,8 +45,8 @@ export default function Team() {
     },
       {
       name: "Chiedza Nhindiri",
-      role: "Adminstrator",
-      description: "Adminstrator of Hitsakela Ntiro Projects",
+      role: "Administrator",
+      description: "Administrator of Hitsakela Ntiro Projects",
       image: "/chiedza.jpeg",
       // socials: [
       //   { icon: <Facebook className="w-5 h-5" />, href: "#" },
@@ -81,7 +81,7 @@ export default function Team() {
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="items-center bg-gray-50 rounded-lg shadow sm:flex bg-white dark:border-gray-700"
+              className="items-center bg-gray-50 rounded-lg shadow  w-full sm:flex bg-white dark:border-gray-700"
             >
               <Link href={"#"} className="flex-shrink-0">
                 <div className="w-64 h-80 relative overflow-hidden rounded-lg sm:rounded-none sm:rounded-l-lg">
