@@ -114,7 +114,7 @@ export const projects: Project[] = [
         id: 2,
         title: "Electrification",
         description:
-            "Professional electrical systems installation for residential and commercial properties with certified technicians.",
+            "We specialize in high-voltage systems covering generation, transmission, and distribution",
         services: [
             "Rural and urban electrification projects.",
             "Installation of transformers, mini-substations, and street lighting.",
@@ -193,7 +193,7 @@ export const projects: Project[] = [
         id: 7,
         title: "Pest Control",
         description:
-            "Comprehensive mechanical solutions including repairs and custom-built systems.",
+            "We provide professional pest control services, including fumigation and rodent control",
         services: [
             "Fumigation",
             " Rodent control",
