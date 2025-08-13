@@ -8,52 +8,28 @@ import { motion } from "framer-motion";
 export default function Team() {
   const teamMembers = [
     {
-      name: "Bonnie Green",
-      role: "CEO & Web Developer",
-      description: "Bonnie drives the technical strategy of the platform and brand.",
-      image: "/avatar.jpeg", // Placeholder: replace with your image path
-      socials: [
-        { icon: <Facebook className="w-5 h-5" />, href: "#" },
-        { icon: <Twitter className="w-5 h-5" />, href: "#" },
-        { icon: <Github className="w-5 h-5" />, href: "#" },
-        { icon: <Globe className="w-5 h-5" />, href: "#" },
-      ],
+      name: "Xilombe Tlakula",
+      role: "Director",
+      description: "Director of Hitsakela ntiro projects",
+      image: "/xilombe.jpeg",
+      // socials: [
+      //   { icon: <Facebook className="w-5 h-5" />, href: "#" },
+      //   { icon: <Twitter className="w-5 h-5" />, href: "#" },
+      //   { icon: <Github className="w-5 h-5" />, href: "#" },
+      //   { icon: <Globe className="w-5 h-5" />, href: "#" },
+      // ],
     },
     {
-      name: "Jese Leos",
-      role: "CTO",
-      description: "Jese drives the technical strategy of the platform and brand.",
-      image: "/avatar.jpeg", // Placeholder: replace with your image path
-      socials: [
-        { icon: <Facebook className="w-5 h-5" />, href: "#" },
-        { icon: <Twitter className="w-5 h-5" />, href: "#" },
-        { icon: <Github className="w-5 h-5" />, href: "#" },
-        { icon: <Globe className="w-5 h-5" />, href: "#" },
-      ],
-    },
-    {
-      name: "Michael Gough",
-      role: "Senior Front-end Developer",
-      description: "Michael drives the technical strategy of the platform and brand.",
-      image: "/avatar.jpeg", // Placeholder: replace with your image path
-      socials: [
-        { icon: <Facebook className="w-5 h-5" />, href: "#" },
-        { icon: <Twitter className="w-5 h-5" />, href: "#" },
-        { icon: <Github className="w-5 h-5" />, href: "#" },
-        { icon: <Globe className="w-5 h-5" />, href: "#" },
-      ],
-    },
-    {
-      name: "Lana Byrd",
-      role: "Marketing & Sales",
-      description: "Lana drives the technical strategy of the platform and brand.",
-      image: "/avatar.jpeg", // Placeholder: replace with your image path
-      socials: [
-        { icon: <Facebook className="w-5 h-5" />, href: "#" },
-        { icon: <Twitter className="w-5 h-5" />, href: "#" },
-        { icon: <Github className="w-5 h-5" />, href: "#" },
-        { icon: <Globe className="w-5 h-5" />, href: "#" },
-      ],
+      name: "Monyani Tlakula",
+      role: "Director",
+      description: "Director of Hitsakela ntiro projects",
+      image: "/monyani.jpeg",
+      // socials: [
+      //   { icon: <Facebook className="w-5 h-5" />, href: "#" },
+      //   { icon: <Twitter className="w-5 h-5" />, href: "#" },
+      //   { icon: <Github className="w-5 h-5" />, href: "#" },
+      //   { icon: <Globe className="w-5 h-5" />, href: "#" },
+      // ],
     },
   ];
 
@@ -61,7 +37,7 @@ export default function Team() {
     <section className="bg-white">
       <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
         <div className="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
-           <motion.h2
+          <motion.h2
             className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -69,7 +45,7 @@ export default function Team() {
           >
             Our Team
           </motion.h2>
-                    <div className="flex justify-center">
+          <div className="flex justify-center">
             <div className="w-24 h-1 bg-blue-400 rounded-full mb-4" />
           </div>
           <p className="font-light text-gray-600 lg:mb-16 sm:text-xl">
@@ -83,36 +59,27 @@ export default function Team() {
               key={index}
               className="items-center bg-gray-50 rounded-lg shadow sm:flex bg-white dark:border-gray-700"
             >
-              <Link href={member.socials[0].href}>
-                <Image
-                  className="w-full rounded-lg sm:rounded-none sm:rounded-l-lg"
-                  src={member.image}
-                  alt={`${member.name} Avatar`}
-                  width={200}
-                  height={200}
-                  priority={index === 0} // Optimize loading for first image
-                />
+              <Link href={"#"} className="flex-shrink-0">
+                <div className="w-64 h-80 relative overflow-hidden rounded-lg sm:rounded-none sm:rounded-l-lg">
+                  <Image
+                    className="object-cover"
+                    src={member.image}
+                    alt={`${member.name} Avatar`}
+                    fill
+                    sizes="256px"
+                    priority={index === 0}
+                  />
+                </div>
               </Link>
               <div className="p-5">
-                <h3 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  <Link href={member.socials[0].href}>{member.name}</Link>
+                <h3 className="text-xl font-bold tracking-tight text-gray-600">
+                  {member.name}
                 </h3>
                 <span className="text-gray-500 dark:text-gray-400">{member.role}</span>
                 <p className="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">
                   {member.description}
                 </p>
-                <ul className="flex space-x-4 sm:mt-0">
-                  {member.socials.map((social, idx) => (
-                    <li key={idx}>
-                      <Link
-                        href={social.href}
-                        className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
-                      >
-                        {social.icon}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+               
               </div>
             </div>
           ))}
