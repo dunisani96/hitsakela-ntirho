@@ -10,7 +10,7 @@ export default function Team() {
     {
       name: "Xilombe Tlakula",
       role: "Director",
-      description: "Director of Hitsakela ntiro projects",
+      description: "Director of Hitsakela Ntiro Projects",
       image: "/xilombe.jpeg",
       // socials: [
       //   { icon: <Facebook className="w-5 h-5" />, href: "#" },
@@ -22,8 +22,32 @@ export default function Team() {
     {
       name: "Monyani Tlakula",
       role: "Director",
-      description: "Director of Hitsakela ntiro projects",
+      description: "Director of Hitsakela Ntiro Projects",
       image: "/monyani.jpeg",
+      // socials: [
+      //   { icon: <Facebook className="w-5 h-5" />, href: "#" },
+      //   { icon: <Twitter className="w-5 h-5" />, href: "#" },
+      //   { icon: <Github className="w-5 h-5" />, href: "#" },
+      //   { icon: <Globe className="w-5 h-5" />, href: "#" },
+      // ],
+    },
+      {
+      name: "Amos Baloyi",
+      role: "Technical Manager",
+      description: "Technical Manager of Hitsakela Ntiro Projects",
+      image: "/amos.jpeg",
+      // socials: [
+      //   { icon: <Facebook className="w-5 h-5" />, href: "#" },
+      //   { icon: <Twitter className="w-5 h-5" />, href: "#" },
+      //   { icon: <Github className="w-5 h-5" />, href: "#" },
+      //   { icon: <Globe className="w-5 h-5" />, href: "#" },
+      // ],
+    },
+      {
+      name: "Chiedza Nhindiri",
+      role: "Adminstrator",
+      description: "Adminstrator of Hitsakela Ntiro Projects",
+      image: "/chiedza.jpeg",
       // socials: [
       //   { icon: <Facebook className="w-5 h-5" />, href: "#" },
       //   { icon: <Twitter className="w-5 h-5" />, href: "#" },
