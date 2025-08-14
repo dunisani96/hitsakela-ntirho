@@ -32,11 +32,7 @@ const contactInfo = [
     title: "Address",
     details: ["Suite 4, The Chambers 37a Grobler Street, Polokwane, 0700"],
   },
-  {
-    icon: Clock,
-    title: "Business Hours",
-    details: ["Mon - Fri: 8:00 AM - 6:00 PM", "Sat: 9:00 AM - 4:00 PM"],
-  },
+ 
 ];
 
 // Sample social links
@@ -89,11 +85,13 @@ export default function ContactSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-neutral-800">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Get In Touch
           </h2>
-          <div className="w-16 h-1.5 bg-blue-400 rounded-full mx-auto mt-3" />
-          <p className="text-gray-500 text-lg font-normal leading-relaxed mt-2 ">
+           <div className="flex justify-center">
+            <div className="w-24 h-1 bg-sky-400 rounded-full mb-4" />
+          </div>
+          <p className="text-base font-light text-gray-600 max-w-3xl mx-auto">
             Ready to start your next project? Contact us today to discuss how we
             can bring your vision to life.
           </p>
@@ -241,7 +239,7 @@ export default function ContactSection() {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full sm:w-auto px-6 py-3 text-white bg-blue-500 hover:bg-blue-600 flex items-center justify-center gap-2 text-sm sm:text-base"
+                  className="w-full sm:w-auto px-6 py-3 text-white bg-sky-400 hover:bg-blue-600 flex items-center justify-center gap-2 text-sm sm:text-base"
                   aria-label={isSubmitting ? "Submitting message" : "Send message"} variant={undefined} size={undefined}                >
                   {isSubmitting ? (
                     <>
@@ -279,7 +277,7 @@ export default function ContactSection() {
                     transition={{ duration: 0.5, delay: 0.1 * index }}
                     whileHover={{ y: -5 }}
                   >
-                    <div className="flex-shrink-0 w-10 h-10 bg-blue-400 rounded-md flex items-center justify-center">
+                    <div className="flex-shrink-0 w-10 h-10 bg-sky-400 rounded-md flex items-center justify-center">
                       <Icon className="w-5 h-5 text-white" />
                     </div>
                     <div>
@@ -300,58 +298,6 @@ export default function ContactSection() {
               })}
             </div>
 
-            {/* Map Placeholder */}
-            {/* <motion.div
-              className="bg-white rounded-lg shadow-md p-5"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-            >
-              <h4 className="text-base sm:text-lg font-semibold text-neutral-800 mb-4">
-                Our Location
-              </h4>
-              <div className="relative w-full h-48 sm:h-64 rounded-md overflow-hidden">
-                <Image
-                  src="/map-placeholder.jpg"
-                  alt="Map showing Hitsakela Ntiro Projects location"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 640px) 100vw, 50vw"
-                />
-              </div>
-              <p className="text-sm text-neutral-600 mt-2 italic">
-                Note: Replace with a Google Maps embed for an interactive map.
-              </p>
-            </motion.div> */}
-
-            {/* Social Links */}
-            {/* <motion.div
-              className="bg-white rounded-lg shadow-md p-5"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-            >
-              <h4 className="text-base sm:text-lg font-semibold text-neutral-800 mb-4">
-                Follow Us
-              </h4>
-              <div className="flex space-x-4">
-                {socialLinks.map((link) => {
-                  const Icon = link.icon;
-                  return (
-                    <a
-                      key={link.name}
-                      href={link.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-400 hover:text-blue-600 transition-colors"
-                      aria-label={`Follow us on ${link.name}`}
-                    >
-                      <Icon size={24} />
-                    </a>
-                  );
-                })}
-              </div>
-            </motion.div> */}
           </motion.div>
         </div>
       </div>

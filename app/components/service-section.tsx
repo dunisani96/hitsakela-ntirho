@@ -1,8 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import { Project, projects } from "@/data/projects";
-import { motion, Variants } from "framer-motion";
-import { ArrowRight, Star } from "lucide-react";
+import { motion, Variant, Variants } from "framer-motion";
+import { CircleChevronRight, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const services: Project[] = projects;
 
@@ -17,7 +19,7 @@ const cardColors: Record<string, string> = {
   Asphalt: "bg-gray-400",
 };
 
-const containerVariants = {
+const containerVariants:Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -48,22 +50,25 @@ const imageVariants: Variants = {
 export default function ServicesSection() {
   return (
     <section
-      id="service"
-      className="bg-gray-50 py-20 px-4 relative overflow-hidden bg-white"
+      id="services"
+      className="py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
+      role="region"
+      aria-labelledby="services-heading"
     >
       {/* Decorative Background Circles */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-1/4 w-80 h-80 rounded-full blur-3xl" />
+      <div className="absolute top-20 left-1/4 w-96 h-96 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full blur-3xl opacity-20" />
+      <div className="absolute bottom-20 right-1/4 w-80 h-80 bg-gradient-to-br from-cyan-100 to-blue-100 rounded-full blur-3xl opacity-15" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-12"
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <motion.h2
+            id="services-heading"
             className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -72,11 +77,10 @@ export default function ServicesSection() {
             Our Services
           </motion.h2>
           <div className="flex justify-center">
-            <div className="w-30 h-1 bg-blue-400 rounded-full mb-4" />
+            <div className="w-24 h-1 bg-sky-400 rounded-full mb-4" />
           </div>
-
           <motion.p
-            className="font-light text-gray-600 lg:mb-16 sm:text-xl "
+            className="text-base font-light text-gray-600 max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -88,7 +92,7 @@ export default function ServicesSection() {
 
         {/* Grid of Cards */}
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -97,19 +101,25 @@ export default function ServicesSection() {
             <motion.div
               key={service.title}
               variants={cardVariants}
-              whileHover={{ y: -12, transition: { duration: 0.3 } }}
-              className="group relative flex flex-col h-full"
+              whileHover={{ y: -8, transition: { duration: 0.3 } }}
+              className="group flex flex-col h-full"
             >
-              <div className="bg-white overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col h-full">
+              <div className="bg-white overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col h-full rounded-lg">
                 {/* Image */}
-                <div className="relative h-48 overflow-hidden flex-shrink-0">
-                  <motion.img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-full object-cover"
+                <div className="relative w-full aspect-[4/3] overflow-hidden flex-shrink-0">
+                  <motion.div
                     variants={imageVariants}
-                    whileHover="hover"
-                  />
+                    className="w-full h-full"
+                  >
+                    <Image
+                      src={service.image}
+                      alt={`${service.title} service`}
+                      fill
+                      className="object-cover rounded-t-lg"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                      priority={index === 0}
+                    />
+                  </motion.div>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-gray-700">
                     {service.category}
@@ -118,43 +128,54 @@ export default function ServicesSection() {
 
                 {/* Card Body */}
                 <div
-                  className={`p-6 flex-grow text-white ${
-                    cardColors[service.category] || "bg-gray-100"
+                  className={`p-6 flex-grow ${
+                    cardColors[service.category] || "bg-gray-50"
                   }`}
                 >
-                  <motion.h3
-                    className="text-xl font-bold mb-3 group-hover:text-white transition-colors duration-300"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.3 + index * 0.1 }}
-                  >
+                  <h3 className="text-xl text-white font-semibold mb-3">
                     {service.title}
-                  </motion.h3>
-                  <motion.p
-                    className="leading-relaxed mb-4"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.4 + index * 0.1 }}
-                  >
+                  </h3>
+                  <p className="text-base text-white font-normal  leading-relaxed mb-4">
                     {service.description}
-                  </motion.p>
-
-                  <motion.a
+                  </p>
+                  <Link
                     href={
                       service.link ||
                       `/projects/${encodeURIComponent(service.title)}`
                     }
-                    className="m-2 inline-flex items-center px-6 py-3 text-sm font-semibold text-white border-2 border-white bg-transparent rounded-lg hover:bg-white hover:text-gray-900 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 group/btn transition-all duration-300"
-                    whileHover={{ x: 5, scale: 1.05 }}
-                    transition={{ duration: 0.2 }}
+                    className="inline-flex items-center px-4 py-2 text-sm font-medium  bg-transparent border border-white rounded-lg hover:bg-blue-50 hover:text-blue-600 hover:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300"
                   >
                     View Projects
-                    <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-200 group-hover/btn:translate-x-1" />
-                  </motion.a>
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
                 </div>
               </div>
             </motion.div>
           ))}
+        </motion.div>
+
+        {/* Fallback List View for Accessibility */}
+        <motion.div
+          className="mt-12 sm:hidden"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <h3 className="text-2xl font-semibold text-gray-900 mb-4 text-center">
+            Our Services
+          </h3>
+          <ul className="space-y-2">
+            {services.map((service, index) => (
+              <motion.li
+                key={index}
+                variants={cardVariants}
+                className="flex items-center text-base font-light text-gray-600"
+              >
+                <CircleChevronRight className="w-4 h-4 text-blue-400 mr-2" />
+                {service.title}
+              </motion.li>
+            ))}
+          </ul>
         </motion.div>
       </div>
     </section>

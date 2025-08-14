@@ -1,21 +1,17 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Users, Award, Clock, Globe } from "lucide-react";
-import { Variants } from "framer-motion";
-
-const values = [
-  {
-    title: "Vision",
-    description:
-      "To be a transformative leader in infrastructure, energy, environmental management, and technology services, building a better future for Africa.",
-  },
-  {
-    title: "Mission",
-    description:
-      "To deliver sustainable, reliable, and innovative services that meet the highest standards of quality while empowering communities, creating jobs, and driving local development.",
-  },
-];
+import Image from "next/image";
+import Link from "next/link";
+import {
+  Facebook,
+  Twitter,
+  Github,
+  Globe,
+  CircleChevronRight,
+  Compass,
+  Target,
+} from "lucide-react";
+import { motion, Variants } from "framer-motion";
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -28,200 +24,199 @@ const containerVariants: Variants = {
   },
 };
 
-const itemVariants: Variants = {
-  hidden: {
-    opacity: 0,
-    y: 30,
-  },
+const itemVariants:Variants = {
+  hidden: { opacity: 0, y: 30 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: {
-      duration: 0.6,
-      ease: "easeOut",
-    },
+    transition: { duration: 0.6, ease: "easeOut" },
   },
 };
 
-export default function AboutSection() {
+
+const aboutContent = {
+  introduction: {
+    title: "Introduction",
+    description:"Hitsakela Ntiro Projects , trading as Ntiro Projects – Group of Companies, is a dynamic and 100% black-owned South African enterprise founded in 2003. We operate across multiple sectors, delivering integrated solutions in construction, electrification, mechanical engineering, environmental services, logistics, and health technology supply. With a strong footprint in both the public and private sectors, we pride ourselves on sustainable service delivery, local empowerment, and innovation. We are driven by a mission to develop infrastructure, uplift communities, and meet the evolving needs of our continent with professionalism and excellence."
+  },
+  vision: {
+    title: "Vision",
+    description:
+      "To deliver professional, high-quality services in construction, transport, vegetation management, horticulture, landscaping, pest control, events, print works, marketing, and general supply at competitive prices, fostering long-term community relationships and maximizing resource efficiency.",
+  },
+  mission: {
+    title: "Mission",
+    description:
+      "Our short-term goal is to secure contracts that optimize our resources, while our long-term vision is to grow as a leader in the construction industry, delivering sustainable and innovative solutions that uplift communities.",
+  },
+  natureOfBusiness: {
+    title: "Nature of Business",
+    services: [
+      "Building Construction and Alterations",
+      "Civil Works",
+      "Vegetation Management",
+      "Horticulture",
+      "Landscaping",
+      "Pest Control",
+      "Production & Events",
+      "Print Works",
+      "Marketing & Communications",
+      "General Supply of Goods and Services",
+      "Environmental Management",
+      "Plumbing",
+      "Electrical Installation",
+      "Fencing",
+      "General Logistics and Plant Maintenance",
+    ],
+  },
+  environment: {
+    title: "Environment",
+    description:
+      "We adhere to strict health and safety standards, ensuring compliance with safety regulations. All employees receive comprehensive technical and practical training to maintain a safe and sustainable work environment.",
+  },
+};
+
+export default function AboutPage() {
   return (
-    <section id="about">
+    <main className="bg-gray-50">
       {/* Hero Section */}
-
-      <section className="bg-gray-50">
-        <motion.div
-          className="text-center mb-16 pt-16 "
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-          <motion.h2
+      <section
+        className="relative bg-gray-100"
+        role="region"
+        aria-labelledby="hero-heading"
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-purple-50/50" />
+        <div className="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8 text-center">
+          <motion.h1
+            id="hero-heading"
             className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            initial={{ opacity: 0, y: -30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >
-            About Our Group
-          </motion.h2>
+            About us
+          </motion.h1>
           <div className="flex justify-center">
-            <div className="w-24 h-1 bg-blue-400 rounded-full mb-4" />
+            <div className="w-24 h-1 bg-sky-400 rounded-full mb-4" />
           </div>
-        </motion.div>
-
-        <motion.div>
-          <img
-            src="riverside-office-park.jpg"
-            alt="Our team and facilities"
-            className="w-full h-full object-cover"
-          />
-        </motion.div>
-      </section>
-
-      <section className="py-20 px-4 bg-gray-50 relative overflow-hidden">
-        {/* Background decorative elements */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-transparent to-purple-50/30" />
-        <div className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full blur-3xl opacity-20" />
-        <div className="absolute bottom-20 left-10 w-96 h-96 bg-gradient-to-tr from-cyan-100 to-blue-100 rounded-full blur-3xl opacity-15" />
-
-        <div className="max-w-7xl mx-auto relative z-10">
-          {/* Main Content Grid */}
-          <div className="">
-            {/* Left Content */}
-            <motion.div
-              variants={containerVariants}
-              initial="hidden"
-              animate="visible"
-              className="space-y-8 w-full"
-            >
-              {/* <motion.div variants={itemVariants} className="text-center">
-                <div className="mt-20 text-left grid grid-cols-2 gap-6">
-                  <div>
-                    <h2 className="text-black mb-2 text-2xl">About us</h2>
-                    <p className="font-light text-black mb-6 text-2lg tracking-normal text-lg/8 font-normal">
-                      <span
-                        className="
-                      text-black font-[1000]
-                      uppercase
-                      "
-                      >
-                        Hitsakela Ntiro Projects
-                      </span>
-                      , trading as Ntiro Projects – Group of Companies, is a
-                      dynamic and 100% black-owned South African enterprise
-                      founded in 2003. We operate across multiple sectors,
-                      delivering integrated solutions in construction,
-                      electrification, mechanical engineering, environmental
-                      services, logistics, and health technology supply. With a
-                      strong footprint in both the public and private sectors,
-                      we pride ourselves on sustainable service delivery, local
-                      empowerment, and innovation. We are driven by a mission to
-                      develop infrastructure, uplift communities, and meet the
-                      evolving needs of our continent with professionalism and
-                      excellence.
-                    </p>
-                    <h2 className="text-black mb-2 text-2xl">Why Choose us</h2>
-                    <p className="font-light text-black mb-6 text-2lg tracking-normal text-lg/8 font-normal">
-                      Proven record in public works and infrastructure
-                      development. Experienced multi-disciplinary project teams.
-                      Black-owned, BBBEE-compliant with empowerment values.
-                      Strong safety and environmental compliance. End-to-end
-                      project execution – planning, supply, delivery, and
-                      maintenance.
-                    </p>
-                  </div>
-
-                  <div className="space-y-6">
-                    {values.map((value) => (
-                      <motion.div
-                        className="flex items-center space-x-4 p-4 bg-gradient-to-tr from-sky-100 via-blue-100 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
-                        whileHover={{ scale: 1.02 }}
-                      >
-                        <div>
-                          <h2 className="text-2xl font-semibold text-gray-900">
-                            {value.title}
-                          </h2>
-                          <p className="text-gray-700 text-2xl tracking-normal text-lg/8 font-normal">
-                            {value.description}
-                          </p>
-                        </div>
-                      </motion.div>
-                    ))}
-                  </div>
-
-                  <div></div>
-                </div>
-              </motion.div> */}
-
-              <motion.div variants={itemVariants} className="text-center">
-                <div className="mt-20 text-left grid grid-cols-1 md:grid-cols-12 gap-6">
-                  {/* About Text */}
-                  <div className="md:col-span-7 col-span-12 space-y-6">
-                    <h2 className="text-gray-900 text-4xl font-bold font-manrope leading-normal lg:text-start text-center">
-                      About us
-                    </h2>
-                    <p className="text-gray-600 text-lg font-normal leading-relaxed lg:text-start text-center ">
-                      Hitsakela Ntiro Projects , trading as Ntiro Projects –
-                      Group of Companies, is a dynamic and 100% black-owned
-                      South African enterprise founded in 2003. We operate
-                      across multiple sectors, delivering integrated solutions
-                      in construction, electrification, mechanical engineering,
-                      environmental services, logistics, and health technology
-                      supply. With a strong footprint in both the public and
-                      private sectors, we pride ourselves on sustainable service
-                      delivery, local empowerment, and innovation. We are driven
-                      by a mission to develop infrastructure, uplift
-                      communities, and meet the evolving needs of our continent
-                      with professionalism and excellence.
-                    </p>
-                    <h2 className="text-gray-900 text-4xl font-bold font-manrope leading-normal lg:text-start text-center">
-                      Why choose us
-                    </h2>
-                    <p className="text-gray-600 text-lg font-normal leading-relaxed lg:text-start text-center">
-                      Proven record in public works and infrastructure
-                      development. Experienced multi-disciplinary project teams.
-                      Black-owned, BBBEE-compliant with empowerment values.
-                      Strong safety and environmental compliance. End-to-end
-                      project execution – planning, supply, delivery, and
-                      maintenance.
-                    </p>
-
-                    {/* Vision and Mission Cards */}
-                    <div className="space-y-6">
-                      {values.map((value) => (
-                        <motion.div
-                          key={value.title}
-                          className="flex items-center space-x-4 p-4 bg-gradient-to-tr from-sky-50 via-blue-50 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
-                          whileHover={{ scale: 1.02 }}
-                        >
-                          <div>
-                            <h2 className="text-gray-900 text-4xl font-bold font-manrope leading-normal lg:text-start text-center">
-                              {value.title}
-                            </h2>
-                            <p className="text-gray-600 text-base font-normal leading-relaxed lg:text-start text-center">
-                              {value.description}
-                            </p>
-                          </div>
-                        </motion.div>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Right Side Image */}
-                  <div className="md:col-span-5 col-span-12">
-                    <img
-                      src="/construction-about.jpg"
-                      alt="Team working together"
-                      className="w-full h-full object-cover rounded-lg shadow-lg"
-                    />
-                  </div>
-                </div>
-              </motion.div>
-            </motion.div>
-
-            {/* Right Content - Image Placeholder */}
-          </div>
+          <motion.p
+            className="text-base font-light text-gray-600 max-w-3xl mx-auto"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            A 100% Black-owned South African enterprise delivering innovative,
+            sustainable solutions since 2003.
+          </motion.p>
         </div>
       </section>
-    </section>
+
+      {/* About Content Section */}
+      <section
+        className="py-16 px-4 sm:px-6 lg:px-8 bg-white relative"
+        role="region"
+        aria-labelledby="about-heading"
+      >
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            className="space-y-12"
+          >
+            {/* Introduction */}
+            <motion.div
+              variants={itemVariants}
+              className="grid grid-cols-1 md:grid-cols-12 gap-6"
+            >
+              <div className="md:col-span-7">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                  {aboutContent.introduction.title}
+                </h2>
+                <p className="text-base font-light text-gray-600 leading-relaxed">
+                  {aboutContent.introduction.description}
+                </p>
+              </div>
+              <div className="md:col-span-5">
+                <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
+                  <Image
+                    src="/construction-about.jpg"
+                    alt="Ntiro Projects in action"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    priority
+                  />
+                </div>
+              </div>
+            </motion.div>
+
+           
+            <motion.div
+              variants={itemVariants}
+              className="grid grid-cols-1 md:grid-cols-2 gap-6"
+            >
+              {[aboutContent.vision, aboutContent.mission].map((item) => (
+                <motion.div
+                  key={item.title}
+                  className="p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow"
+                  whileHover={{ scale: 1.02 }}
+                >
+                  <div className="flex items-center mb-3">
+                    {item.title === "Vision" ? (
+                      <Target
+                        className="w-10 h-10 text-sky-400 mr-2"
+                        aria-hidden="true"
+                      />
+                    ) : (
+                      <Compass
+                        className="w-10 h-10 text-sky-400 mr-2"
+                        aria-hidden="true"
+                      />
+                    )}
+                    <h3 className="text-2xl font-semibold text-gray-900">
+                      {item.title}
+                    </h3>
+                  </div>
+                  <p className="text-base font-light text-gray-600 leading-relaxed">
+                    {item.description}
+                  </p>
+                </motion.div>
+              ))}
+            </motion.div>
+
+            {/* Nature of Business */}
+            <motion.div variants={itemVariants}>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                {aboutContent.natureOfBusiness.title}
+              </h2>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {aboutContent.natureOfBusiness.services.map(
+                  (service, index) => (
+                    <li
+                      key={index}
+                      className="flex items-center text-base font-light text-gray-600"
+                    >
+                      <CircleChevronRight className="w-4 h-4 text-sky-400 mr-2" />
+                      {service}
+                    </li>
+                  )
+                )}
+              </ul>
+            </motion.div>
+
+            {/* Environment */}
+            <motion.div variants={itemVariants}>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                {aboutContent.environment.title}
+              </h2>
+              <p className="text-base font-light text-gray-600 leading-relaxed">
+                {aboutContent.environment.description}
+              </p>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+    </main>
   );
 }

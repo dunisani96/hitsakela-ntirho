@@ -10,6 +10,7 @@ import OutlineButton from "./components/outline-button";
 import Carousel from "./components/carousel";
 import Offices from "./components/offices";
 import Team from "./components/team";
+import Clients from "./components/our-clients";
 
 
 const Home = () => {
@@ -25,6 +26,7 @@ const Home = () => {
       <ServicesSection />
       <ContactSection />
       <Offices/>
+      <Clients/>
       <Footer />
     </div>
   );
