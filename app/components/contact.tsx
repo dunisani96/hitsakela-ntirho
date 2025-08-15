@@ -42,7 +42,7 @@ const socialLinks = [
   { name: "Twitter", icon: Twitter, url: "#" },
 ];
 
-export default function ContactSection() {
+export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -179,7 +179,6 @@ export default function ContactSection() {
                     Service Interest
                   </label>
                   <select
-                    id="service"
                     name="service"
                     value={formData.service}
                     onChange={handleInputChange}

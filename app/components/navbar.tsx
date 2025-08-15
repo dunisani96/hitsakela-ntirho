@@ -60,8 +60,8 @@ export default function Navbar() {
               Contact
             </a>
             <a
-              href="#service"
-              onClick={(e) => handleSmoothScroll(e, "service")}
+              href="#services"
+              onClick={(e) => handleSmoothScroll(e, "services")}
               className="hover:text-blue-600"
             >
               Services

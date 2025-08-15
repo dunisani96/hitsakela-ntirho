@@ -72,7 +72,7 @@ export default function HeroSection() {
       <div className="relative z-10 flex h-full w-full items-center justify-center px-4 sm:px-6 lg:px-8 text-center">
         <div>
           <motion.button
-            className="inline-flex items-center px-6 py-3 sm:px-8 sm:py-4 border-2 border-yellow-400 text-white font-semibold rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300 text-base sm:text-lg md:text-6xl"
+            className="inline-flex items-center px-6 py-3 sm:px-8 sm:py-4 border-2 border-yellow-400 text-white font-semibold rounded-full  hover:text-white transition-all duration-300 text-base sm:text-lg md:text-6xl"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

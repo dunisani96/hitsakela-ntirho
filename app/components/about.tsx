@@ -76,12 +76,12 @@ const aboutContent = {
   },
 };
 
-export default function AboutPage() {
+export default function About() {
   return (
-    <main className="bg-gray-50">
+    <main id="about" className="bg-gray-50">
       {/* Hero Section */}
       <section
-        className="relative bg-gray-100"
+        className="relative bg-gray-50"
         role="region"
         aria-labelledby="hero-heading"
       >

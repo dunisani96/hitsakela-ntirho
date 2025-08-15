@@ -3,14 +3,14 @@ import React, { useEffect } from "react";
 import HeroSection from "./components/hero";
 import Navbar from "./components/navbar";
 import AboutSection from "./components/about";
-import ServicesSection from "./components/service-section";
+import ServicesSection from "./components/services";
 import ContactSection from "./components/contact";
 import Footer from "./components/footer";
 import OutlineButton from "./components/outline-button";
 import Carousel from "./components/carousel";
 import Offices from "./components/offices";
 import Team from "./components/team";
-import Clients from "./components/our-clients";
+import Clients from "./components/clients";
 
 
 const Home = () => {
@@ -19,7 +19,7 @@ const Home = () => {
     <div className="py-28 bg-white" >
       <Navbar/>
       <HeroSection />
-      <OutlineButton name={"Contact Us"} color="blue" url={"/contact"}/>
+      <OutlineButton name={"Contact Us"} color="blue" url={"/#contact"}/>
       <Carousel/>
       <AboutSection />
       <Team/>
