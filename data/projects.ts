@@ -8,6 +8,7 @@ export interface Project {
     services: string[]
     link: string;
     category: string;
+    clients:[]
 }
 
 // export const projects: Project[] = [
@@ -108,7 +109,8 @@ export const projects: Project[] = [
         ],
         image: "/civil-construc.jpg",
         link: "/services/civil-and-construction",
-        category: "Construction"
+        category: "Construction",
+        clients:[]
     },
     {
         id: 2,
@@ -126,7 +128,9 @@ export const projects: Project[] = [
         ],
         image: "/electrif.jpg",
         link: "/services/electrification",
-        category: "Electrification"
+        category: "Electrification",
+        clients:[]
+        
     },
     {
         id: 3,
@@ -143,7 +147,8 @@ export const projects: Project[] = [
         ],
         image: "/mechanical-works.jpg",
         link: "/services/mechanical-works",
-        category: "Mechanical"
+        category: "Mechanical",
+        clients:[]
     },
     {
         id: 4,
@@ -158,7 +163,8 @@ export const projects: Project[] = [
         ],
         image: "/plant-hire-hero.jpg",
         link: "/services/plant-hire",
-        category: "Plant Hire"
+        category: "Plant Hire",
+        clients:[]
     },
     {
         id: 5,
@@ -173,7 +179,8 @@ export const projects: Project[] = [
         ],
         image: "/cold-mix-asphalt.jpg",
         link: "/services/asphalt-cold-mix",
-        category: "Asphalt"
+        category: "Asphalt",
+        clients:[]
     },
     {
         id: 6,
@@ -187,7 +194,8 @@ export const projects: Project[] = [
         ],
         image: "/vegetation.jpg",
         link: "/services/vegetation-management",
-        category: "Vegetation"
+        category: "Vegetation",
+        clients:[]
     },
     {
         id: 7,
@@ -203,7 +211,8 @@ export const projects: Project[] = [
         ],
         image: "/pest-control.jpeg",
         link: "/services/pest-control",
-        category: "Pest Control"
+        category: "Pest Control",
+        clients:[]
     },
     {
         id: 8,
@@ -221,6 +230,7 @@ export const projects: Project[] = [
         ],
         image: "/general-med.jpg",
         link: "/services/general-medical-supplies",
-        category: "Medical"
+        category: "Medical",
+        clients:[]
     },
 ];

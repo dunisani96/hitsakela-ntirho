@@ -16,7 +16,7 @@ import Clients from "./components/clients";
 const Home = () => {
 
   return (
-    <div className="py-28 bg-white" >
+    <div className="pt-28 bg-white" >
       <Navbar/>
       <HeroSection />
       <OutlineButton name={"Contact Us"} color="blue" url={"/#contact"}/>

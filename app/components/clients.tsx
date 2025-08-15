@@ -83,7 +83,7 @@ export default function Clients() {
             Our clients
           </h2>
           <div className="flex justify-center">
-            <div className="w-24 h-1 bg-blue-400 rounded-full mb-4" />
+            <div className="w-24 h-1 bg-sky-400 rounded-full mb-4" />
           </div>
           <p className="text-base font-light text-gray-600 max-w-3xl mx-auto mb-4">
             Hitsakela Ntiro Projects, a 100% black-owned South African leader in construction, electrification, and more.
@@ -120,14 +120,14 @@ export default function Clients() {
               <>
                 <button
                   onClick={handlePrev}
-                  className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white p-2 rounded-full hover:bg-blue-600"
+                  className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-sky-400 text-white p-2 rounded-full hover:bg-blue-600"
                   aria-label="Previous client"
                 >
                   <ChevronLeft size={20} />
                 </button>
                 <button
                   onClick={handleNext}
-                  className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white p-2 rounded-full hover:bg-blue-600"
+                  className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-sky-400 text-white p-2 rounded-full hover:bg-blue-600"
                   aria-label="Next client"
                 >
                   <ChevronRight size={20} />

@@ -26,9 +26,9 @@ const services = [
   },
    {
     icon: <Wrench className="w-5 h-5 text-teal-600" />,
-    title: 'Mechanical Engineering',
+    title: 'Mechanical Works',
     description: 'Maintenance, repairs, and mechanical installations.',
-    href: 'services/mechanical-engineering',
+    href: 'services/mechanical-works',
   },
    {
     icon: <Truck className="w-5 h-5 text-blue-500" />,

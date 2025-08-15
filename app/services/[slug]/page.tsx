@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { motion, Variants } from "framer-motion";
 import { useEffect, use } from "react";
+import { CircleChevronRight } from "lucide-react";
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -87,7 +88,7 @@ export default function ProjectDetail({ params }: ProjectDetailProps) {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           className="absolute top-4 left-4 bg-white text-gray-900 p-3 rounded-full hover:bg-gray-100 transition-colors duration-300 shadow-md z-20 flex items-center justify-center"
-          onClick={() => router.push("/")}
+          onClick={() => router.push("/#services")}
           aria-label="Return to home page"
         >
           <svg
@@ -104,6 +105,7 @@ export default function ProjectDetail({ params }: ProjectDetailProps) {
               d="M15 19l-7-7 7-7"
             />
           </svg>
+          Hitsakela Ntiro Projects
         </motion.button>
 
         <motion.div
@@ -164,9 +166,16 @@ export default function ProjectDetail({ params }: ProjectDetailProps) {
                 {project.description}
               </p>
               {project.services && (
-                <ul className="list-disc list-inside space-y-2 text-gray-700 text-base mt-4">
+                <ul className="font-light list-disc list-inside space-y-2 text-gray-700 text-base mt-4">
                   {project.services.map((item, idx) => (
-                    <li key={idx}>{item}</li>
+                    // <li key={idx}>  <CircleChevronRight className="w-4 h-4 text-sky-400 mr-2" />{item}</li>
+                    <li
+                      key={idx}
+                      className="flex items-center text-base font-light text-gray-600"
+                    >
+                      <CircleChevronRight className="w-4 h-4 text-sky-400 mr-2" />
+                      {item}
+                    </li>
                   ))}
                 </ul>
               )}

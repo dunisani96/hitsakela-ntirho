@@ -98,7 +98,7 @@ export default function Offices() {
           Our Offices
         </motion.h2>
          <div className="flex justify-center">
-            <div className="w-24 h-1 bg-blue-400 rounded-full mb-4" />
+            <div className="w-24 h-1 bg-sky-400 rounded-full mb-4" />
           </div>
         <motion.p
           className="text-base font-light text-gray-600 max-w-3xl mx-auto"
