@@ -25,6 +25,13 @@ const itemVariants: Variants = {
   },
 };
 
+const imageVariants: Variants = {
+  hover: {
+    scale: 1.1,
+    transition: { duration: 0.4, ease: "easeOut" },
+  },
+};
+
 const teamMembers = [
   {
     name: "Xilombe Tlakula",
@@ -99,16 +106,16 @@ export default function Team() {
               variants={itemVariants}
             >
               <Link href="#" className="block w-full">
-                <div className="relative w-full aspect-[3/4] max-w-[256px] mx-auto sm:max-w-[300px]">
+                <motion.div  variants={imageVariants} className="relative w-full aspect-[3/4] max-w-[256px] mx-auto sm:max-w-[300px]">
                   <Image
-                    className="object-cover rounded-t-lg"
+                    className="object-cover rounded-t-lg w-full h-full"
                     src={member.image}
                     alt={`${member.name} Avatar`}
                     fill
-                    sizes="(max-width: 640px) 100vw, 300px"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     priority={index === 0}
                   />
-                </div>
+                </motion.div>
               </Link>
               <div className="p-6 flex-1">
                 <h3 className="text-xl font-semibold text-gray-900">

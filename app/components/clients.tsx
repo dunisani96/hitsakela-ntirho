@@ -8,10 +8,18 @@ export default function Clients() {
   // Placeholder client logos (replace with actual logo paths and alt text)
   const clients = [
     { src: "/limpop.png", alt: "Limpopo Provincial Government Logo" },
-    { src: "/vharanani.png", alt: "Vharanani Properties" },
     { src: "/vhembe.png", alt: "Polokwane Municipality Logo" },
     { src: "/stats.webp", alt: "South African National Roads Agency Logo" },
     { src: "/chabane.png", alt: "CV Chabane" },
+    { src: "/clients/mg.jpg", alt: "Mogalakwena" },
+    { src: "/clients/exxaro_logo.png", alt: "exxaro" },
+    { src: "/clients/eskom_logo.jpg", alt: "eskom" },
+    { src: "/clients/telkom_logo.svg", alt: "Telkom" },
+    { src: "/clients/anglo_american.svg", alt: "anglo" },
+    { src: "/clients/bushbuckridge_local.png", alt: "bushbuckridge" },
+    { src: "/clients/health.jpg", alt: "health" },
+    { src: "/clients/public_works.jpg", alt: "Public works" },
+    { src: "/clients/western.png", alt: "Western cape" },
   ];
 
   // Carousel state
@@ -47,9 +55,7 @@ export default function Clients() {
 
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) =>
-        prevIndex + 1 >= clients.length - visibleClients + 1
-          ? 0
-          : prevIndex + 1
+        prevIndex + 1 >= clients.length - visibleClients + 1 ? 0 : prevIndex + 1
       );
     }, 3000); // Change every 3 seconds
 
@@ -65,9 +71,7 @@ export default function Clients() {
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex + 1 >= clients.length - visibleClients + 1
-        ? 0
-        : prevIndex + 1
+      prevIndex + 1 >= clients.length - visibleClients + 1 ? 0 : prevIndex + 1
     );
   };
 
@@ -86,14 +90,19 @@ export default function Clients() {
             <div className="w-24 h-1 bg-sky-400 rounded-full mb-4" />
           </div>
           <p className="text-base font-light text-gray-600 max-w-3xl mx-auto mb-4">
-            Hitsakela Ntiro Projects, a 100% black-owned South African leader in construction, electrification, and more.
+            Hitsakela Ntiro Projects, a 100% black-owned South African leader in
+            construction, electrification, and more.
           </p>
           {/* Carousel */}
           <div className="relative mb-10 overflow-hidden">
             <div
               ref={carouselRef}
               className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentIndex * (100 / visibleClients)}%)` }}
+              style={{
+                transform: `translateX(-${
+                  currentIndex * (100 / visibleClients)
+                }%)`,
+              }}
             >
               {clients.map((client, index) => (
                 <motion.div

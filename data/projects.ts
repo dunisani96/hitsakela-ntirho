@@ -1,5 +1,11 @@
 // data/projects.tsx
 
+ interface Client{
+    name:string
+    message:string
+
+}
+
 export interface Project {
     id: number;
     title: string;
@@ -8,7 +14,7 @@ export interface Project {
     services: string[]
     link: string;
     category: string;
-    clients:[]
+    clients:Client[]
 }
 
 // export const projects: Project[] = [
@@ -110,7 +116,8 @@ export const projects: Project[] = [
         image: "/civil-construc.jpg",
         link: "/services/civil-and-construction",
         category: "Construction",
-        clients:[]
+        clients:[{name:"hello" , message:"nice job"}, {name:"second client", message:"greatest people to work with "}]
+       
     },
     {
         id: 2,

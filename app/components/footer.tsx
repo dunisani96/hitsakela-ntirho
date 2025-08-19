@@ -55,6 +55,17 @@ export default function Footer() {
                   className="mx-auto md:mx-0"
                 />
               </a>
+              <br/>
+              <a href="#">
+                <Image
+                  src="/ecbsa.gif"
+                  alt="Accreditation Badge"
+                  width={250}
+                  height={250}
+                  className="mx-auto md:mx-0"
+                />
+              </a>
+
             </p>
           </div>
         </div>
