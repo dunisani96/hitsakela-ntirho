@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Hitsakela ntiro",
-  description: "website",
+  title: "Hitsakela Ntiro Projects",
+  description: "Hitsakela Ntiro Projects website",
 };
 
 export default function RootLayout({ children }:any) {
